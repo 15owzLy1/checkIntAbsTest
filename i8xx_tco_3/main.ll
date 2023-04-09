@@ -36,180 +36,177 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: nounwind uwtable
 define zeroext i8 @seconds_to_ticks(i32 %seconds) #0 {
-entry:
-  %mul = mul nsw i32 %seconds, 10
-  %div = sdiv i32 %mul, 6
-  %conv = trunc i32 %div to i8
-  ret i8 %conv
+  %1 = mul nsw i32 %seconds, 10
+  %2 = sdiv i32 %1, 6
+  %3 = trunc i32 %2 to i8
+  ret i8 %3
 }
 
 ; Function Attrs: nounwind uwtable
 define i32 @tco_timer_set_heartbeat(i32 %t) #0 {
-entry:
-  %call = call zeroext i8 @seconds_to_ticks(i32 %t)
-  %conv = zext i8 %call to i32
-  %cmp = icmp sgt i32 %conv, 63
-  br i1 %cmp, label %if.then, label %lor.lhs.false
+  %1 = call zeroext i8 @seconds_to_ticks(i32 %t)
+  %2 = zext i8 %1 to i32
+  %3 = icmp sgt i32 %2, 63
+  br i1 %3, label %7, label %4
 
-lor.lhs.false:                                    ; preds = %entry
-  %conv2 = zext i8 %call to i32
-  %cmp3 = icmp slt i32 %conv2, 4
-  br i1 %cmp3, label %if.then, label %if.end
+; <label>:4                                       ; preds = %0
+  %5 = zext i8 %1 to i32
+  %6 = icmp slt i32 %5, 4
+  br i1 %6, label %7, label %8
 
-if.then:                                          ; preds = %lor.lhs.false, %entry
-  br label %return
+; <label>:7                                       ; preds = %4, %0
+  br label %31
 
-if.end:                                           ; preds = %lor.lhs.false
-  br label %do.body
+; <label>:8                                       ; preds = %4
+  br label %9
 
-do.body:                                          ; preds = %if.end
-  br label %while.cond
+; <label>:9                                       ; preds = %8
+  br label %10
 
-while.cond:                                       ; preds = %while.body, %do.body
-  %0 = load i8, i8* @tco_lock, align 1
-  %tobool = trunc i8 %0 to i1
-  br i1 %tobool, label %while.body, label %while.end
+; <label>:10                                      ; preds = %13, %9
+  %11 = load i8, i8* @tco_lock, align 1
+  %12 = trunc i8 %11 to i1
+  br i1 %12, label %13, label %14
 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:13                                      ; preds = %10
+  br label %10
 
-while.end:                                        ; preds = %while.cond
-  br label %do.end
+; <label>:14                                      ; preds = %10
+  br label %15
 
-do.end:                                           ; preds = %while.end
-  %conv5 = zext i8 0 to i32
-  %and = and i32 %conv5, 192
-  %conv6 = trunc i32 %and to i8
-  %conv7 = zext i8 %call to i32
-  %conv8 = zext i8 %conv6 to i32
-  %or = or i32 %conv8, %conv7
-  %conv9 = trunc i32 %or to i8
-  br label %do.body10
+; <label>:15                                      ; preds = %14
+  %16 = zext i8 0 to i32
+  %17 = and i32 %16, 192
+  %18 = trunc i32 %17 to i8
+  %19 = zext i8 %1 to i32
+  %20 = zext i8 %18 to i32
+  %21 = or i32 %20, %19
+  %22 = trunc i32 %21 to i8
+  br label %23
 
-do.body10:                                        ; preds = %do.end
+; <label>:23                                      ; preds = %15
   store i8 0, i8* @tco_lock, align 1
-  br label %do.end11
+  br label %24
 
-do.end11:                                         ; preds = %do.body10
-  %conv12 = zext i8 0 to i32
-  %and13 = and i32 %conv12, 63
-  %conv14 = zext i8 %call to i32
-  %cmp15 = icmp ne i32 %and13, %conv14
-  br i1 %cmp15, label %if.then17, label %if.end18
+; <label>:24                                      ; preds = %23
+  %25 = zext i8 0 to i32
+  %26 = and i32 %25, 63
+  %27 = zext i8 %1 to i32
+  %28 = icmp ne i32 %26, %27
+  br i1 %28, label %29, label %30
 
-if.then17:                                        ; preds = %do.end11
-  br label %return
+; <label>:29                                      ; preds = %24
+  br label %31
 
-if.end18:                                         ; preds = %do.end11
+; <label>:30                                      ; preds = %24
   store i32 %t, i32* @heartbeat, align 4
-  br label %return
+  br label %31
 
-return:                                           ; preds = %if.end18, %if.then17, %if.then
-  %retval.0 = phi i32 [ -22, %if.then ], [ -22, %if.then17 ], [ 0, %if.end18 ]
-  ret i32 %retval.0
+; <label>:31                                      ; preds = %30, %29, %7
+  %.0 = phi i32 [ -22, %7 ], [ -22, %29 ], [ 0, %30 ]
+  ret i32 %.0
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @closer1(i8* %unused) #0 {
-entry:
   store i8 86, i8* @tco_write_buf, align 1
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  %0 = load i32, i32* @nowayout, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.end3, label %if.then
+; <label>:1                                       ; preds = %0
+  %2 = load i32, i32* @nowayout, align 4
+  %3 = icmp ne i32 %2, 0
+  br i1 %3, label %10, label %4
 
-if.then:                                          ; preds = %do.body
+; <label>:4                                       ; preds = %1
   store i8 0, i8* @tco_expect_close, align 1
-  %1 = load i8, i8* @tco_write_buf, align 1
-  %conv = sext i8 %1 to i32
-  %cmp = icmp eq i32 %conv, 86
-  br i1 %cmp, label %if.then2, label %if.end
+  %5 = load i8, i8* @tco_write_buf, align 1
+  %6 = sext i8 %5 to i32
+  %7 = icmp eq i32 %6, 86
+  br i1 %7, label %8, label %9
 
-if.then2:                                         ; preds = %if.then
+; <label>:8                                       ; preds = %4
   store i8 42, i8* @tco_expect_close, align 1
-  br label %if.end
+  br label %9
 
-if.end:                                           ; preds = %if.then2, %if.then
-  br label %if.end3
+; <label>:9                                       ; preds = %8, %4
+  br label %10
 
-if.end3:                                          ; preds = %if.end, %do.body
-  br label %do.body4
+; <label>:10                                      ; preds = %9, %1
+  br label %11
 
-do.body4:                                         ; preds = %if.end3
-  br label %do.body5
+; <label>:11                                      ; preds = %10
+  br label %12
 
-do.body5:                                         ; preds = %do.body4
+; <label>:12                                      ; preds = %11
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %13
 
-do.end:                                           ; preds = %do.body5
-  br label %do.end6
+; <label>:13                                      ; preds = %12
+  br label %14
 
-do.end6:                                          ; preds = %do.end
-  br label %do.end7
+; <label>:14                                      ; preds = %13
+  br label %15
 
-do.end7:                                          ; preds = %do.end6
+; <label>:15                                      ; preds = %14
   store i8 42, i8* @tco_expect_close, align 1
-  br label %do.body8
+  br label %16
 
-do.body8:                                         ; preds = %do.end7
-  %2 = load i8, i8* @tco_expect_close, align 1
-  %conv9 = sext i8 %2 to i32
-  %cmp10 = icmp ne i32 %conv9, 42
-  br i1 %cmp10, label %if.then12, label %if.else
+; <label>:16                                      ; preds = %15
+  %17 = load i8, i8* @tco_expect_close, align 1
+  %18 = sext i8 %17 to i32
+  %19 = icmp ne i32 %18, 42
+  br i1 %19, label %20, label %21
 
-if.then12:                                        ; preds = %do.body8
+; <label>:20                                      ; preds = %16
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 721, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer1, i32 0, i32 0)) #4
   unreachable
 
-if.else:                                          ; preds = %do.body8
-  br label %do.body13
+; <label>:21                                      ; preds = %16
+  br label %22
 
-do.body13:                                        ; preds = %if.else
-  br label %do.body14
+; <label>:22                                      ; preds = %21
+  br label %23
 
-do.body14:                                        ; preds = %do.body13
-  br label %while.cond
+; <label>:23                                      ; preds = %22
+  br label %24
 
-while.cond:                                       ; preds = %while.body, %do.body14
-  %3 = load i8, i8* @tco_lock, align 1
-  %tobool15 = trunc i8 %3 to i1
-  br i1 %tobool15, label %while.body, label %while.end
+; <label>:24                                      ; preds = %27, %23
+  %25 = load i8, i8* @tco_lock, align 1
+  %26 = trunc i8 %25 to i1
+  br i1 %26, label %27, label %28
 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:27                                      ; preds = %24
+  br label %24
 
-while.end:                                        ; preds = %while.cond
-  br label %do.end16
+; <label>:28                                      ; preds = %24
+  br label %29
 
-do.end16:                                         ; preds = %while.end
+; <label>:29                                      ; preds = %28
   store i8 1, i8* @tco1_cnt_b4, align 1
-  br label %do.body17
+  br label %30
 
-do.body17:                                        ; preds = %do.end16
+; <label>:30                                      ; preds = %29
   store i8 0, i8* @tco_lock, align 1
-  br label %do.end18
+  br label %31
 
-do.end18:                                         ; preds = %do.body17
-  br label %do.end19
+; <label>:31                                      ; preds = %30
+  br label %32
 
-do.end19:                                         ; preds = %do.end18
-  br label %if.end20
+; <label>:32                                      ; preds = %31
+  br label %33
 
-if.end20:                                         ; preds = %do.end19
-  br label %do.body21
+; <label>:33                                      ; preds = %32
+  br label %34
 
-do.body21:                                        ; preds = %if.end20
+; <label>:34                                      ; preds = %33
   store i64 0, i64* @timer_alive, align 8
-  br label %do.end22
+  br label %35
 
-do.end22:                                         ; preds = %do.body21
+; <label>:35                                      ; preds = %34
   store i8 0, i8* @tco_expect_close, align 1
-  br label %do.end23
+  br label %36
 
-do.end23:                                         ; preds = %do.end22
+; <label>:36                                      ; preds = %35
   ret i8* null
 }
 
@@ -218,997 +215,963 @@ declare void @__assert_fail(i8*, i8*, i32, i8*) #1
 
 ; Function Attrs: nounwind uwtable
 define i8* @closer2(i8* %unused) #0 {
-entry:
   store i8 86, i8* @tco_write_buf, align 1
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  %0 = load i32, i32* @nowayout, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.end3, label %if.then
+; <label>:1                                       ; preds = %0
+  %2 = load i32, i32* @nowayout, align 4
+  %3 = icmp ne i32 %2, 0
+  br i1 %3, label %10, label %4
 
-if.then:                                          ; preds = %do.body
+; <label>:4                                       ; preds = %1
   store i8 0, i8* @tco_expect_close, align 1
-  %1 = load i8, i8* @tco_write_buf, align 1
-  %conv = sext i8 %1 to i32
-  %cmp = icmp eq i32 %conv, 86
-  br i1 %cmp, label %if.then2, label %if.end
+  %5 = load i8, i8* @tco_write_buf, align 1
+  %6 = sext i8 %5 to i32
+  %7 = icmp eq i32 %6, 86
+  br i1 %7, label %8, label %9
 
-if.then2:                                         ; preds = %if.then
+; <label>:8                                       ; preds = %4
   store i8 42, i8* @tco_expect_close, align 1
-  br label %if.end
+  br label %9
 
-if.end:                                           ; preds = %if.then2, %if.then
-  br label %if.end3
+; <label>:9                                       ; preds = %8, %4
+  br label %10
 
-if.end3:                                          ; preds = %if.end, %do.body
-  br label %do.body4
+; <label>:10                                      ; preds = %9, %1
+  br label %11
 
-do.body4:                                         ; preds = %if.end3
-  br label %do.body5
+; <label>:11                                      ; preds = %10
+  br label %12
 
-do.body5:                                         ; preds = %do.body4
+; <label>:12                                      ; preds = %11
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %13
 
-do.end:                                           ; preds = %do.body5
-  br label %do.end6
+; <label>:13                                      ; preds = %12
+  br label %14
 
-do.end6:                                          ; preds = %do.end
-  br label %do.end7
+; <label>:14                                      ; preds = %13
+  br label %15
 
-do.end7:                                          ; preds = %do.end6
+; <label>:15                                      ; preds = %14
   store i8 42, i8* @tco_expect_close, align 1
-  br label %do.body8
+  br label %16
 
-do.body8:                                         ; preds = %do.end7
-  %2 = load i8, i8* @tco_expect_close, align 1
-  %conv9 = sext i8 %2 to i32
-  %cmp10 = icmp ne i32 %conv9, 42
-  br i1 %cmp10, label %if.then12, label %if.else
+; <label>:16                                      ; preds = %15
+  %17 = load i8, i8* @tco_expect_close, align 1
+  %18 = sext i8 %17 to i32
+  %19 = icmp ne i32 %18, 42
+  br i1 %19, label %20, label %21
 
-if.then12:                                        ; preds = %do.body8
+; <label>:20                                      ; preds = %16
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 732, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer2, i32 0, i32 0)) #4
   unreachable
 
-if.else:                                          ; preds = %do.body8
-  br label %do.body13
+; <label>:21                                      ; preds = %16
+  br label %22
 
-do.body13:                                        ; preds = %if.else
-  br label %do.body14
+; <label>:22                                      ; preds = %21
+  br label %23
 
-do.body14:                                        ; preds = %do.body13
-  br label %while.cond
+; <label>:23                                      ; preds = %22
+  br label %24
 
-while.cond:                                       ; preds = %while.body, %do.body14
-  %3 = load i8, i8* @tco_lock, align 1
-  %tobool15 = trunc i8 %3 to i1
-  br i1 %tobool15, label %while.body, label %while.end
+; <label>:24                                      ; preds = %27, %23
+  %25 = load i8, i8* @tco_lock, align 1
+  %26 = trunc i8 %25 to i1
+  br i1 %26, label %27, label %28
 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:27                                      ; preds = %24
+  br label %24
 
-while.end:                                        ; preds = %while.cond
-  br label %do.end16
+; <label>:28                                      ; preds = %24
+  br label %29
 
-do.end16:                                         ; preds = %while.end
+; <label>:29                                      ; preds = %28
   store i8 1, i8* @tco1_cnt_b4, align 1
-  br label %do.body17
+  br label %30
 
-do.body17:                                        ; preds = %do.end16
+; <label>:30                                      ; preds = %29
   store i8 0, i8* @tco_lock, align 1
-  br label %do.end18
+  br label %31
 
-do.end18:                                         ; preds = %do.body17
-  br label %do.end19
+; <label>:31                                      ; preds = %30
+  br label %32
 
-do.end19:                                         ; preds = %do.end18
-  br label %if.end20
+; <label>:32                                      ; preds = %31
+  br label %33
 
-if.end20:                                         ; preds = %do.end19
-  br label %do.body21
+; <label>:33                                      ; preds = %32
+  br label %34
 
-do.body21:                                        ; preds = %if.end20
+; <label>:34                                      ; preds = %33
   store i64 0, i64* @timer_alive, align 8
-  br label %do.end22
+  br label %35
 
-do.end22:                                         ; preds = %do.body21
+; <label>:35                                      ; preds = %34
   store i8 0, i8* @tco_expect_close, align 1
-  br label %do.end23
+  br label %36
 
-do.end23:                                         ; preds = %do.end22
+; <label>:36                                      ; preds = %35
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @closer3(i8* %unused) #0 {
-entry:
   store i8 86, i8* @tco_write_buf, align 1
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  %0 = load i32, i32* @nowayout, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.end3, label %if.then
+; <label>:1                                       ; preds = %0
+  %2 = load i32, i32* @nowayout, align 4
+  %3 = icmp ne i32 %2, 0
+  br i1 %3, label %10, label %4
 
-if.then:                                          ; preds = %do.body
+; <label>:4                                       ; preds = %1
   store i8 0, i8* @tco_expect_close, align 1
-  %1 = load i8, i8* @tco_write_buf, align 1
-  %conv = sext i8 %1 to i32
-  %cmp = icmp eq i32 %conv, 86
-  br i1 %cmp, label %if.then2, label %if.end
+  %5 = load i8, i8* @tco_write_buf, align 1
+  %6 = sext i8 %5 to i32
+  %7 = icmp eq i32 %6, 86
+  br i1 %7, label %8, label %9
 
-if.then2:                                         ; preds = %if.then
+; <label>:8                                       ; preds = %4
   store i8 42, i8* @tco_expect_close, align 1
-  br label %if.end
+  br label %9
 
-if.end:                                           ; preds = %if.then2, %if.then
-  br label %if.end3
+; <label>:9                                       ; preds = %8, %4
+  br label %10
 
-if.end3:                                          ; preds = %if.end, %do.body
-  br label %do.body4
+; <label>:10                                      ; preds = %9, %1
+  br label %11
 
-do.body4:                                         ; preds = %if.end3
-  br label %do.body5
+; <label>:11                                      ; preds = %10
+  br label %12
 
-do.body5:                                         ; preds = %do.body4
+; <label>:12                                      ; preds = %11
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %13
 
-do.end:                                           ; preds = %do.body5
-  br label %do.end6
+; <label>:13                                      ; preds = %12
+  br label %14
 
-do.end6:                                          ; preds = %do.end
-  br label %do.end7
+; <label>:14                                      ; preds = %13
+  br label %15
 
-do.end7:                                          ; preds = %do.end6
+; <label>:15                                      ; preds = %14
   store i8 42, i8* @tco_expect_close, align 1
-  br label %do.body8
+  br label %16
 
-do.body8:                                         ; preds = %do.end7
-  %2 = load i8, i8* @tco_expect_close, align 1
-  %conv9 = sext i8 %2 to i32
-  %cmp10 = icmp ne i32 %conv9, 42
-  br i1 %cmp10, label %if.then12, label %if.else
+; <label>:16                                      ; preds = %15
+  %17 = load i8, i8* @tco_expect_close, align 1
+  %18 = sext i8 %17 to i32
+  %19 = icmp ne i32 %18, 42
+  br i1 %19, label %20, label %21
 
-if.then12:                                        ; preds = %do.body8
+; <label>:20                                      ; preds = %16
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 743, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer3, i32 0, i32 0)) #4
   unreachable
 
-if.else:                                          ; preds = %do.body8
-  br label %do.body13
+; <label>:21                                      ; preds = %16
+  br label %22
 
-do.body13:                                        ; preds = %if.else
-  br label %do.body14
+; <label>:22                                      ; preds = %21
+  br label %23
 
-do.body14:                                        ; preds = %do.body13
-  br label %while.cond
+; <label>:23                                      ; preds = %22
+  br label %24
 
-while.cond:                                       ; preds = %while.body, %do.body14
-  %3 = load i8, i8* @tco_lock, align 1
-  %tobool15 = trunc i8 %3 to i1
-  br i1 %tobool15, label %while.body, label %while.end
+; <label>:24                                      ; preds = %27, %23
+  %25 = load i8, i8* @tco_lock, align 1
+  %26 = trunc i8 %25 to i1
+  br i1 %26, label %27, label %28
 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:27                                      ; preds = %24
+  br label %24
 
-while.end:                                        ; preds = %while.cond
-  br label %do.end16
+; <label>:28                                      ; preds = %24
+  br label %29
 
-do.end16:                                         ; preds = %while.end
+; <label>:29                                      ; preds = %28
   store i8 1, i8* @tco1_cnt_b4, align 1
-  br label %do.body17
+  br label %30
 
-do.body17:                                        ; preds = %do.end16
+; <label>:30                                      ; preds = %29
   store i8 0, i8* @tco_lock, align 1
-  br label %do.end18
+  br label %31
 
-do.end18:                                         ; preds = %do.body17
-  br label %do.end19
+; <label>:31                                      ; preds = %30
+  br label %32
 
-do.end19:                                         ; preds = %do.end18
-  br label %if.end20
+; <label>:32                                      ; preds = %31
+  br label %33
 
-if.end20:                                         ; preds = %do.end19
-  br label %do.body21
+; <label>:33                                      ; preds = %32
+  br label %34
 
-do.body21:                                        ; preds = %if.end20
+; <label>:34                                      ; preds = %33
   store i64 0, i64* @timer_alive, align 8
-  br label %do.end22
+  br label %35
 
-do.end22:                                         ; preds = %do.body21
+; <label>:35                                      ; preds = %34
   store i8 0, i8* @tco_expect_close, align 1
-  br label %do.end23
+  br label %36
 
-do.end23:                                         ; preds = %do.end22
+; <label>:36                                      ; preds = %35
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer1(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer2(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer3(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer4(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
-  br label %do.body5
+; <label>:6                                       ; preds = %5
+  br label %7
 
-do.body5:                                         ; preds = %do.end4
-  br label %do.body6
+; <label>:7                                       ; preds = %6
+  br label %8
 
-do.body6:                                         ; preds = %do.body5
-  br label %do.body7
+; <label>:8                                       ; preds = %7
+  br label %9
 
-do.body7:                                         ; preds = %do.body6
+; <label>:9                                       ; preds = %8
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end8
+  br label %10
 
-do.end8:                                          ; preds = %do.body7
-  br label %do.end9
+; <label>:10                                      ; preds = %9
+  br label %11
 
-do.end9:                                          ; preds = %do.end8
-  br label %do.end10
+; <label>:11                                      ; preds = %10
+  br label %12
 
-do.end10:                                         ; preds = %do.end9
+; <label>:12                                      ; preds = %11
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer5(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer6(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer7(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer8(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer9(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer10(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer11(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer12(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer13(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer14(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer15(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer16(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer17(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer18(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer19(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer20(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer21(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer22(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer23(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer24(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer25(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer26(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer27(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer28(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer29(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer30(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.body1
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.body1:                                         ; preds = %do.body
-  br label %do.body2
+; <label>:2                                       ; preds = %1
+  br label %3
 
-do.body2:                                         ; preds = %do.body1
+; <label>:3                                       ; preds = %2
   store i8 1, i8* @tco1_rld, align 1
-  br label %do.end
+  br label %4
 
-do.end:                                           ; preds = %do.body2
-  br label %do.end3
+; <label>:4                                       ; preds = %3
+  br label %5
 
-do.end3:                                          ; preds = %do.end
-  br label %do.end4
+; <label>:5                                       ; preds = %4
+  br label %6
 
-do.end4:                                          ; preds = %do.end3
+; <label>:6                                       ; preds = %5
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i32 @main(i32 %argc, i8** %argv) #0 {
-entry:
   %t1 = alloca i64, align 8
   %t2 = alloca i64, align 8
   store i8 0, i8* @tco_expect_close, align 1
-  %call = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @closer1, i8* null) #5
-  %call1 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @closer2, i8* null) #5
-  %call2 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @closer3, i8* null) #5
-  %call3 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer1, i8* null) #5
-  %call4 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer2, i8* null) #5
-  %call5 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer3, i8* null) #5
+  %1 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @closer1, i8* null) #5
+  %2 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @closer2, i8* null) #5
+  %3 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @closer3, i8* null) #5
+  %4 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer1, i8* null) #5
+  %5 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer2, i8* null) #5
+  %6 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer3, i8* null) #5
   call void @pthread_exit(i8* null) #6
   unreachable
-
-return:                                           ; No predecessors!
+                                                  ; No predecessors!
   ret i32 0
 }
 

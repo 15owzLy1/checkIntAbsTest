@@ -32,24 +32,22 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: nounwind uwtable
 define void @stop() #0 {
-entry:
   store i32 0, i32* @systemState, align 4
   ret void
 }
 
 ; Function Attrs: nounwind uwtable
 define void @start(i32 %_startTime, i32 %_interval) #0 {
-entry:
-  %0 = load i32, i32* @numberOfRecords, align 4
-  %add = add nsw i32 %0, 1
-  %cmp = icmp sge i32 %add, 64
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @numberOfRecords, align 4
+  %2 = add nsw i32 %1, 1
+  %3 = icmp sge i32 %2, 64
+  br i1 %3, label %4, label %5
 
-if.then:                                          ; preds = %entry
+; <label>:4                                       ; preds = %0
   store i32 0, i32* @systemState, align 4
-  br label %if.end
+  br label %5
 
-if.end:                                           ; preds = %if.then, %entry
+; <label>:5                                       ; preds = %4, %0
   store i32 0, i32* @intervalCounter, align 4
   store i32 0, i32* @tickCounter, align 4
   store i32 0, i32* @numberOfRecords, align 4
@@ -61,29 +59,28 @@ if.end:                                           ; preds = %if.then, %entry
 
 ; Function Attrs: nounwind uwtable
 define i8* @task_measure1(i8* %unused) #0 {
-entry:
-  %0 = load i32, i32* @tickCounter, align 4
-  %inc = add nsw i32 %0, 1
-  store i32 %inc, i32* @tickCounter, align 4
   %1 = load i32, i32* @tickCounter, align 4
-  %2 = load i32, i32* @interval, align 4
-  store i32 0, i32* @tickCounter, align 4
+  %2 = add nsw i32 %1, 1
+  store i32 %2, i32* @tickCounter, align 4
   %3 = load i32, i32* @tickCounter, align 4
-  %cmp = icmp ne i32 %3, 0
-  br i1 %cmp, label %if.then, label %if.end
+  %4 = load i32, i32* @interval, align 4
+  store i32 0, i32* @tickCounter, align 4
+  %5 = load i32, i32* @tickCounter, align 4
+  %6 = icmp ne i32 %5, 0
+  br i1 %6, label %7, label %8
 
-if.then:                                          ; preds = %entry
+; <label>:7                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.4, i32 0, i32 0), i32 86, i8* getelementptr inbounds ([28 x i8], [28 x i8]* @__PRETTY_FUNCTION__.task_measure1, i32 0, i32 0)) #3
   unreachable
 
-if.end:                                           ; preds = %entry
-  %4 = load i32, i32* @intervalCounter, align 4
-  %inc1 = add nsw i32 %4, 1
-  store i32 %inc1, i32* @intervalCounter, align 4
+; <label>:8                                       ; preds = %0
+  %9 = load i32, i32* @intervalCounter, align 4
+  %10 = add nsw i32 %9, 1
+  store i32 %10, i32* @intervalCounter, align 4
   store i32 1, i32* @records, align 4
-  %5 = load i32, i32* @numberOfRecords, align 4
-  %inc2 = add nsw i32 %5, 1
-  store i32 %inc2, i32* @numberOfRecords, align 4
+  %11 = load i32, i32* @numberOfRecords, align 4
+  %12 = add nsw i32 %11, 1
+  store i32 %12, i32* @numberOfRecords, align 4
   ret i8* undef
 }
 
@@ -92,150 +89,148 @@ declare void @__assert_fail(i8*, i8*, i32, i8*) #1
 
 ; Function Attrs: nounwind uwtable
 define i8* @task_measure2(i8* %unused) #0 {
-entry:
   store i32 0, i32* @tickCounter, align 4
-  %0 = load i32, i32* @tickCounter, align 4
-  %cmp = icmp ne i32 %0, 0
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @tickCounter, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %4
 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.4, i32 0, i32 0), i32 103, i8* getelementptr inbounds ([28 x i8], [28 x i8]* @__PRETTY_FUNCTION__.task_measure2, i32 0, i32 0)) #3
   unreachable
 
-if.end:                                           ; preds = %entry
+; <label>:4                                       ; preds = %0
   ret i8* undef
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @task_communicate(i8* %unused) #0 {
-entry:
-  %call = call i32 @rand() #4
-  %rem = srem i32 %call, 4
-  %add = add nsw i32 %rem, 1
-  store i32 %add, i32* @cmd, align 4
-  %call1 = call i32 @rand() #4
-  %rem2 = srem i32 %call1, 2
-  %add3 = add nsw i32 %rem2, 1
-  store i32 %add3, i32* @rspStatus, align 4
+  %1 = call i32 @rand() #4
+  %2 = srem i32 %1, 4
+  %3 = add nsw i32 %2, 1
+  store i32 %3, i32* @cmd, align 4
+  %4 = call i32 @rand() #4
+  %5 = srem i32 %4, 2
+  %6 = add nsw i32 %5, 1
+  store i32 %6, i32* @rspStatus, align 4
   store i32 0, i32* @decodingStatus, align 4
-  %0 = load i32, i32* @cmd, align 4
-  %cmp = icmp eq i32 %0, 2
-  br i1 %cmp, label %if.then, label %lor.lhs.false
-
-lor.lhs.false:                                    ; preds = %entry
-  %1 = load i32, i32* @cmd, align 4
-  %cmp4 = icmp eq i32 %1, 3
-  br i1 %cmp4, label %if.then, label %lor.lhs.false5
-
-lor.lhs.false5:                                   ; preds = %lor.lhs.false
-  %2 = load i32, i32* @cmd, align 4
-  %cmp6 = icmp eq i32 %2, 4
-  br i1 %cmp6, label %if.then, label %lor.lhs.false7
-
-lor.lhs.false7:                                   ; preds = %lor.lhs.false5
-  %3 = load i32, i32* @cmd, align 4
-  %cmp8 = icmp eq i32 %3, 1
-  br i1 %cmp8, label %if.then, label %if.end
-
-if.then:                                          ; preds = %lor.lhs.false7, %lor.lhs.false5, %lor.lhs.false, %entry
-  store i32 1, i32* @decodingStatus, align 4
-  br label %if.end
-
-if.end:                                           ; preds = %if.then, %lor.lhs.false7
-  %4 = load i32, i32* @rspStatus, align 4
-  %cmp9 = icmp eq i32 %4, 1
-  br i1 %cmp9, label %if.then10, label %if.end37
-
-if.then10:                                        ; preds = %if.end
-  %5 = load i32, i32* @cmd, align 4
-  %cmp11 = icmp eq i32 %5, 2
-  br i1 %cmp11, label %if.then12, label %if.end16
-
-if.then12:                                        ; preds = %if.then10
-  %6 = load i32, i32* @systemState, align 4
-  %cmp13 = icmp ne i32 %6, 1
-  br i1 %cmp13, label %if.then14, label %if.else
-
-if.then14:                                        ; preds = %if.then12
-  store i32 0, i32* @rspStatus, align 4
-  br label %if.end15
-
-if.else:                                          ; preds = %if.then12
-  store i32 0, i32* @systemState, align 4
-  br label %if.end15
-
-if.end15:                                         ; preds = %if.else, %if.then14
-  store i32 1, i32* @sendit, align 4
-  br label %if.end16
-
-if.end16:                                         ; preds = %if.end15, %if.then10
   %7 = load i32, i32* @cmd, align 4
-  %cmp17 = icmp eq i32 %7, 3
-  br i1 %cmp17, label %if.then18, label %if.end19
+  %8 = icmp eq i32 %7, 2
+  br i1 %8, label %18, label %9
 
-if.then18:                                        ; preds = %if.end16
-  store i32 1, i32* @sendit, align 4
-  br label %if.end19
+; <label>:9                                       ; preds = %0
+  %10 = load i32, i32* @cmd, align 4
+  %11 = icmp eq i32 %10, 3
+  br i1 %11, label %18, label %12
 
-if.end19:                                         ; preds = %if.then18, %if.end16
-  %8 = load i32, i32* @cmd, align 4
-  %cmp20 = icmp eq i32 %8, 4
-  br i1 %cmp20, label %if.then21, label %if.end22
+; <label>:12                                      ; preds = %9
+  %13 = load i32, i32* @cmd, align 4
+  %14 = icmp eq i32 %13, 4
+  br i1 %14, label %18, label %15
 
-if.then21:                                        ; preds = %if.end19
-  store i32 1, i32* @sendit, align 4
-  br label %if.end22
+; <label>:15                                      ; preds = %12
+  %16 = load i32, i32* @cmd, align 4
+  %17 = icmp eq i32 %16, 1
+  br i1 %17, label %18, label %19
 
-if.end22:                                         ; preds = %if.then21, %if.end19
-  %9 = load i32, i32* @cmd, align 4
-  %cmp23 = icmp eq i32 %9, 0
-  br i1 %cmp23, label %if.then24, label %if.end36
+; <label>:18                                      ; preds = %15, %12, %9, %0
+  store i32 1, i32* @decodingStatus, align 4
+  br label %19
 
-if.then24:                                        ; preds = %if.end22
-  %10 = load i32, i32* @systemState, align 4
-  %cmp25 = icmp ne i32 %10, 0
-  br i1 %cmp25, label %if.then26, label %if.else27
+; <label>:19                                      ; preds = %18, %15
+  %20 = load i32, i32* @rspStatus, align 4
+  %21 = icmp eq i32 %20, 1
+  br i1 %21, label %22, label %58
 
-if.then26:                                        ; preds = %if.then24
+; <label>:22                                      ; preds = %19
+  %23 = load i32, i32* @cmd, align 4
+  %24 = icmp eq i32 %23, 2
+  br i1 %24, label %25, label %31
+
+; <label>:25                                      ; preds = %22
+  %26 = load i32, i32* @systemState, align 4
+  %27 = icmp ne i32 %26, 1
+  br i1 %27, label %28, label %29
+
+; <label>:28                                      ; preds = %25
   store i32 0, i32* @rspStatus, align 4
-  br label %if.end35
+  br label %30
 
-if.else27:                                        ; preds = %if.then24
-  %11 = load i32, i32* @numberOfRecords, align 4
-  %add28 = add nsw i32 %11, 1
-  %cmp29 = icmp sge i32 %add28, 64
-  br i1 %cmp29, label %if.then30, label %if.end31
-
-if.then30:                                        ; preds = %if.else27
+; <label>:29                                      ; preds = %25
   store i32 0, i32* @systemState, align 4
-  br label %if.end31
+  br label %30
 
-if.end31:                                         ; preds = %if.then30, %if.else27
+; <label>:30                                      ; preds = %29, %28
+  store i32 1, i32* @sendit, align 4
+  br label %31
+
+; <label>:31                                      ; preds = %30, %22
+  %32 = load i32, i32* @cmd, align 4
+  %33 = icmp eq i32 %32, 3
+  br i1 %33, label %34, label %35
+
+; <label>:34                                      ; preds = %31
+  store i32 1, i32* @sendit, align 4
+  br label %35
+
+; <label>:35                                      ; preds = %34, %31
+  %36 = load i32, i32* @cmd, align 4
+  %37 = icmp eq i32 %36, 4
+  br i1 %37, label %38, label %39
+
+; <label>:38                                      ; preds = %35
+  store i32 1, i32* @sendit, align 4
+  br label %39
+
+; <label>:39                                      ; preds = %38, %35
+  %40 = load i32, i32* @cmd, align 4
+  %41 = icmp eq i32 %40, 0
+  br i1 %41, label %42, label %57
+
+; <label>:42                                      ; preds = %39
+  %43 = load i32, i32* @systemState, align 4
+  %44 = icmp ne i32 %43, 0
+  br i1 %44, label %45, label %46
+
+; <label>:45                                      ; preds = %42
+  store i32 0, i32* @rspStatus, align 4
+  br label %56
+
+; <label>:46                                      ; preds = %42
+  %47 = load i32, i32* @numberOfRecords, align 4
+  %48 = add nsw i32 %47, 1
+  %49 = icmp sge i32 %48, 64
+  br i1 %49, label %50, label %51
+
+; <label>:50                                      ; preds = %46
+  store i32 0, i32* @systemState, align 4
+  br label %51
+
+; <label>:51                                      ; preds = %50, %46
   store i32 0, i32* @intervalCounter, align 4
   store i32 0, i32* @tickCounter, align 4
   store i32 0, i32* @numberOfRecords, align 4
   store i32 1, i32* @startTime, align 4
   store i32 1, i32* @interval, align 4
   store i32 1, i32* @systemState, align 4
-  %12 = load i32, i32* @numberOfRecords, align 4
-  %cmp32 = icmp ne i32 %12, 0
-  br i1 %cmp32, label %if.then33, label %if.end34
+  %52 = load i32, i32* @numberOfRecords, align 4
+  %53 = icmp ne i32 %52, 0
+  br i1 %53, label %54, label %55
 
-if.then33:                                        ; preds = %if.end31
+; <label>:54                                      ; preds = %51
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.4, i32 0, i32 0), i32 162, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @__PRETTY_FUNCTION__.task_communicate, i32 0, i32 0)) #3
   unreachable
 
-if.end34:                                         ; preds = %if.end31
+; <label>:55                                      ; preds = %51
   store i32 1, i32* @sendit, align 4
-  br label %if.end35
+  br label %56
 
-if.end35:                                         ; preds = %if.end34, %if.then26
-  br label %if.end36
+; <label>:56                                      ; preds = %55, %45
+  br label %57
 
-if.end36:                                         ; preds = %if.end35, %if.end22
-  br label %if.end37
+; <label>:57                                      ; preds = %56, %39
+  br label %58
 
-if.end37:                                         ; preds = %if.end36, %if.end
+; <label>:58                                      ; preds = %57, %19
   ret i8* undef
 }
 
@@ -244,14 +239,13 @@ declare i32 @rand() #2
 
 ; Function Attrs: nounwind uwtable
 define i32 @main() #0 {
-entry:
   %t1 = alloca i64, align 8
   %t2 = alloca i64, align 8
   %t3 = alloca i64, align 8
   store i32 0, i32* @systemState, align 4
-  %call = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @task_communicate, i8* null) #4
-  %call1 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @task_measure1, i8* null) #4
-  %call2 = call i32 @pthread_create(i64* %t3, %union.pthread_attr_t* null, i8* (i8*)* @task_measure2, i8* null) #4
+  %1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @task_communicate, i8* null) #4
+  %2 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @task_measure1, i8* null) #4
+  %3 = call i32 @pthread_create(i64* %t3, %union.pthread_attr_t* null, i8* (i8*)* @task_measure2, i8* null) #4
   ret i32 0
 }
 

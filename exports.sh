@@ -3,13 +3,13 @@
 # modify according to your install directory for LLVM (this chould contain the
 # bin, lib, include, ...  directories
 #LLVM_PREFIX=/usr
-LLVM_PREFIX=/home/chungha/base_llvm/llvm/build
+LLVM_PREFIX=/home/szy/qwq/llvm-3.8.0
 
 # Helps Duet find its way
 
 # Location of WorklistAI .so file (debug)
 #WORKLIST_SO=/home/markus/src/LLVMApron/debug/worklist-ai/libworklistAI.so
-WORKLIST_SO=/home/chungha/work/interruptabstract/src/build/worklist-ai/libworklistAI.so
+WORKLIST_SO=/home/szy/qwq/intAbs/src/build/worklist-ai/libworklistAI.so
 
 # Location of optimized SO
 #WORKLIST_OPT_SO=/home/markus/src/LLVMApron/release/worklist-ai/libworklistAI.so

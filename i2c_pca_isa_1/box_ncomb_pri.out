@@ -222,7 +222,7 @@ Interference Iteration: 2
 Analyzing thread: 0
 ======================================
 ID of Load: 12
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 31
   store i32 2, i32* @global_dev, align 4
 St is NOT nonLast
@@ -231,7 +231,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 12
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 44
   store i32 -1, i32* @global_dev, align 4
 St is NOT nonLast
@@ -240,7 +240,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 12
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 48
   store i32 3, i32* @global_dev, align 4
 St is NOT nonLast
@@ -249,7 +249,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 12
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 61
   store i32 -1, i32* @global_dev, align 4
 St is NOT nonLast
@@ -258,7 +258,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 17
-  %1 = load i32, i32* @irq, align 4
+  %5 = load i32, i32* @irq, align 4
 ID of Store: 29
   store i32 2, i32* @irq, align 4
 St is NOT nonLast
@@ -267,7 +267,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 17
-  %1 = load i32, i32* @irq, align 4
+  %5 = load i32, i32* @irq, align 4
 ID of Store: 46
   store i32 3, i32* @irq, align 4
 St is NOT nonLast
@@ -276,7 +276,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 17
-  %1 = load i32, i32* @irq, align 4
+  %5 = load i32, i32* @irq, align 4
 ID of Store: 63
   store i32 -1, i32* @irq, align 4
 St is NOT nonLast
@@ -285,7 +285,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 21
-  %2 = load i32, i32* @global_id, align 4
+  %8 = load i32, i32* @global_id, align 4
 ID of Store: 30
   store i32 2, i32* @global_id, align 4
 St is NOT nonLast
@@ -294,7 +294,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 21
-  %2 = load i32, i32* @global_id, align 4
+  %8 = load i32, i32* @global_id, align 4
 ID of Store: 39
   store i32 -1, i32* @global_id, align 4
 St is NOT nonLast
@@ -303,7 +303,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 21
-  %2 = load i32, i32* @global_id, align 4
+  %8 = load i32, i32* @global_id, align 4
 ID of Store: 47
   store i32 3, i32* @global_id, align 4
 St is NOT nonLast
@@ -312,7 +312,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 21
-  %2 = load i32, i32* @global_id, align 4
+  %8 = load i32, i32* @global_id, align 4
 ID of Store: 56
   store i32 -1, i32* @global_id, align 4
 St is NOT nonLast
@@ -322,7 +322,7 @@ st is not higher than ld
 Analyzing thread: 1
 ======================================
 ID of Load: 32
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 11
   store i32 1, i32* @global_dev, align 4
 St is NOT nonLast
@@ -331,7 +331,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 32
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 27
   store i32 -1, i32* @global_dev, align 4
 St is NOT nonLast
@@ -340,7 +340,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 32
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 48
   store i32 3, i32* @global_dev, align 4
 St is NOT nonLast
@@ -349,7 +349,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 32
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 61
   store i32 -1, i32* @global_dev, align 4
 St is NOT nonLast
@@ -358,7 +358,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 34
-  %1 = load i32, i32* @irq, align 4
+  %5 = load i32, i32* @irq, align 4
 ID of Store: 9
   store i32 1, i32* @irq, align 4
 St is NOT nonLast
@@ -367,7 +367,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 34
-  %1 = load i32, i32* @irq, align 4
+  %5 = load i32, i32* @irq, align 4
 ID of Store: 46
   store i32 3, i32* @irq, align 4
 St is NOT nonLast
@@ -376,7 +376,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 34
-  %1 = load i32, i32* @irq, align 4
+  %5 = load i32, i32* @irq, align 4
 ID of Store: 63
   store i32 -1, i32* @irq, align 4
 St is NOT nonLast
@@ -385,7 +385,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 38
-  %2 = load i32, i32* @global_id, align 4
+  %8 = load i32, i32* @global_id, align 4
 ID of Store: 10
   store i32 1, i32* @global_id, align 4
 St is NOT nonLast
@@ -394,7 +394,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 38
-  %2 = load i32, i32* @global_id, align 4
+  %8 = load i32, i32* @global_id, align 4
 ID of Store: 22
   store i32 -1, i32* @global_id, align 4
 St is NOT nonLast
@@ -403,7 +403,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 38
-  %2 = load i32, i32* @global_id, align 4
+  %8 = load i32, i32* @global_id, align 4
 ID of Store: 47
   store i32 3, i32* @global_id, align 4
 St is NOT nonLast
@@ -412,7 +412,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 38
-  %2 = load i32, i32* @global_id, align 4
+  %8 = load i32, i32* @global_id, align 4
 ID of Store: 56
   store i32 -1, i32* @global_id, align 4
 St is NOT nonLast
@@ -421,44 +421,8 @@ st is not higher than ld
 ======================================
 Analyzing thread: 2
 ======================================
-ID of Load: 55
-  %2 = load i32, i32* @global_id, align 4
-ID of Store: 10
-  store i32 1, i32* @global_id, align 4
-St is NOT nonLast
-Load is completeLoad
-st is not higher than ld
-======================================
-======================================
-ID of Load: 55
-  %2 = load i32, i32* @global_id, align 4
-ID of Store: 22
-  store i32 -1, i32* @global_id, align 4
-St is NOT nonLast
-Load is completeLoad
-st is not higher than ld
-======================================
-======================================
-ID of Load: 55
-  %2 = load i32, i32* @global_id, align 4
-ID of Store: 30
-  store i32 2, i32* @global_id, align 4
-St is NOT nonLast
-Load is completeLoad
-st is not higher than ld
-======================================
-======================================
-ID of Load: 55
-  %2 = load i32, i32* @global_id, align 4
-ID of Store: 39
-  store i32 -1, i32* @global_id, align 4
-St is NOT nonLast
-Load is completeLoad
-st is not higher than ld
-======================================
-======================================
 ID of Load: 49
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 11
   store i32 1, i32* @global_dev, align 4
 St is NOT nonLast
@@ -467,7 +431,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 49
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 27
   store i32 -1, i32* @global_dev, align 4
 St is NOT nonLast
@@ -476,7 +440,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 49
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 31
   store i32 2, i32* @global_dev, align 4
 St is NOT nonLast
@@ -485,7 +449,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 49
-  %0 = load i32, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
 ID of Store: 44
   store i32 -1, i32* @global_dev, align 4
 St is NOT nonLast
@@ -494,7 +458,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 51
-  %1 = load i32, i32* @irq, align 4
+  %5 = load i32, i32* @irq, align 4
 ID of Store: 9
   store i32 1, i32* @irq, align 4
 St is NOT nonLast
@@ -503,7 +467,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 51
-  %1 = load i32, i32* @irq, align 4
+  %5 = load i32, i32* @irq, align 4
 ID of Store: 29
   store i32 2, i32* @irq, align 4
 St is NOT nonLast
@@ -512,9 +476,45 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 51
-  %1 = load i32, i32* @irq, align 4
+  %5 = load i32, i32* @irq, align 4
 ID of Store: 63
   store i32 -1, i32* @irq, align 4
+St is NOT nonLast
+Load is completeLoad
+st is not higher than ld
+======================================
+======================================
+ID of Load: 55
+  %8 = load i32, i32* @global_id, align 4
+ID of Store: 10
+  store i32 1, i32* @global_id, align 4
+St is NOT nonLast
+Load is completeLoad
+st is not higher than ld
+======================================
+======================================
+ID of Load: 55
+  %8 = load i32, i32* @global_id, align 4
+ID of Store: 22
+  store i32 -1, i32* @global_id, align 4
+St is NOT nonLast
+Load is completeLoad
+st is not higher than ld
+======================================
+======================================
+ID of Load: 55
+  %8 = load i32, i32* @global_id, align 4
+ID of Store: 30
+  store i32 2, i32* @global_id, align 4
+St is NOT nonLast
+Load is completeLoad
+st is not higher than ld
+======================================
+======================================
+ID of Load: 55
+  %8 = load i32, i32* @global_id, align 4
+ID of Store: 39
+  store i32 -1, i32* @global_id, align 4
 St is NOT nonLast
 Load is completeLoad
 st is not higher than ld
@@ -522,8 +522,6 @@ st is not higher than ld
 Analyzing thread: 3
 Analyzing thread: 4
 v20: @irq = common global i32 0, align 4
-v16:   %2 = load i32, i32* @global_id, align 4
-v17:   %cmp3 = icmp ne i32 %2, 3
 v28: @cnt5 = common global i32 0, align 4
 v21: @global_id = common global i32 0, align 4
 v22: @global_dev = common global i32 0, align 4
@@ -534,29 +532,31 @@ v25: @cnt2 = common global i32 0, align 4
 v26: @cnt3 = common global i32 0, align 4
 v27: @cnt4 = common global i32 0, align 4
 v29: @cnt6 = common global i32 0, align 4
-v0:   %0 = load i32, i32* @global_dev, align 4
-v1:   %cmp = icmp ne i32 %0, 1
 v32: i8* %1
+v0:   %1 = load i32, i32* @global_dev, align 4
+v1:   %2 = icmp ne i32 %1, 1
 v31: i8* %0
-v2:   %1 = load i32, i32* @irq, align 4
-v3:   %cmp1 = icmp sgt i32 %1, -1
 v34: i8* %3
-v33: i32 %2
-v4:   %2 = load i32, i32* @global_id, align 4
-v5:   %cmp3 = icmp ne i32 %2, 1
+v2:   %5 = load i32, i32* @irq, align 4
+v3:   %6 = icmp sgt i32 %5, -1
 v35: i8* %unused
-v6:   %0 = load i32, i32* @global_dev, align 4
-v7:   %cmp = icmp ne i32 %0, 2
+v4:   %8 = load i32, i32* @global_id, align 4
+v5:   %9 = icmp ne i32 %8, 1
+v33: i32 %2
+v6:   %1 = load i32, i32* @global_dev, align 4
+v7:   %2 = icmp ne i32 %1, 2
 v36: i8* %unused
-v8:   %1 = load i32, i32* @irq, align 4
-v9:   %cmp1 = icmp sgt i32 %1, -1
-v10:   %2 = load i32, i32* @global_id, align 4
-v11:   %cmp3 = icmp ne i32 %2, 2
-v12:   %0 = load i32, i32* @global_dev, align 4
-v13:   %cmp = icmp ne i32 %0, 3
+v8:   %5 = load i32, i32* @irq, align 4
+v9:   %6 = icmp sgt i32 %5, -1
+v10:   %8 = load i32, i32* @global_id, align 4
+v11:   %9 = icmp ne i32 %8, 2
 v37: i8* %unused
-v14:   %1 = load i32, i32* @irq, align 4
-v15:   %cmp1 = icmp sgt i32 %1, -1
+v12:   %1 = load i32, i32* @global_dev, align 4
+v13:   %2 = icmp ne i32 %1, 3
+v14:   %5 = load i32, i32* @irq, align 4
+v15:   %6 = icmp sgt i32 %5, -1
+v16:   %8 = load i32, i32* @global_id, align 4
+v17:   %9 = icmp ne i32 %8, 3
 v18:   %t1 = alloca i64, align 8
 v19:   %t2 = alloca i64, align 8
 v38: i64* %0
@@ -565,13 +565,12 @@ v40: i8* (i8*)* %2
 v41: i8* %3
 ==== req1() Results ====
 BasicBlock: 
-entry:
   store i32 1, i32* @irq, align 4
   store i32 1, i32* @global_id, align 4
   store i32 1, i32* @global_dev, align 4
-  %0 = load i32, i32* @global_dev, align 4
-  %cmp = icmp ne i32 %0, 1
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @global_dev, align 4
+  %2 = icmp ne i32 %1, 1
+  br i1 %2, label %3, label %4
 Facts: interval of dim (42,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -617,16 +616,16 @@ Facts: interval of dim (42,0):
       v9 in [-oo,+oo]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 277, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req1, i32 0, i32 0)) #3
   unreachable
 Facts: interval of dim (42,0): bottom
 
 BasicBlock: 
-if.end:                                           ; preds = %entry
-  %1 = load i32, i32* @irq, align 4
-  %cmp1 = icmp sgt i32 %1, -1
-  br i1 %cmp1, label %if.then2, label %if.end6
+; <label>:4                                       ; preds = %0
+  %5 = load i32, i32* @irq, align 4
+  %6 = icmp sgt i32 %5, -1
+  br i1 %6, label %7, label %12
 Facts: interval of dim (42,0):
       v0 in [1,1]
       v1 in [0,0]
@@ -672,10 +671,16 @@ Facts: interval of dim (42,0):
       v9 in [-oo,+oo]
 
 BasicBlock: 
-if.then2:                                         ; preds = %if.end
-  %2 = load i32, i32* @global_id, align 4
-  %cmp3 = icmp ne i32 %2, 1
-  br i1 %cmp3, label %if.then4, label %if.end5
+; <label>:10                                      ; preds = %7
+  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 277, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req1, i32 0, i32 0)) #3
+  unreachable
+Facts: interval of dim (42,0): bottom
+
+BasicBlock: 
+; <label>:7                                       ; preds = %4
+  %8 = load i32, i32* @global_id, align 4
+  %9 = icmp ne i32 %8, 1
+  br i1 %9, label %10, label %11
 Facts: interval of dim (42,0):
       v0 in [1,1]
       v1 in [0,0]
@@ -721,7 +726,7 @@ Facts: interval of dim (42,0):
       v9 in [-oo,+oo]
 
 BasicBlock: 
-if.end6:                                          ; preds = %if.end5, %if.end
+; <label>:12                                      ; preds = %11, %4
   store i32 -1, i32* @global_id, align 4
   store i32 -1, i32* @global_dev, align 4
   ret i8* undef
@@ -770,14 +775,8 @@ Facts: interval of dim (42,0):
       v9 in [-oo,+oo]
 
 BasicBlock: 
-if.then4:                                         ; preds = %if.then2
-  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 277, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req1, i32 0, i32 0)) #3
-  unreachable
-Facts: interval of dim (42,0): bottom
-
-BasicBlock: 
-if.end5:                                          ; preds = %if.then2
-  br label %if.end6
+; <label>:11                                      ; preds = %7
+  br label %12
 Facts: interval of dim (42,0):
       v0 in [1,1]
       v1 in [0,0]
@@ -825,13 +824,12 @@ Facts: interval of dim (42,0):
 ======================
 ==== req2() Results ====
 BasicBlock: 
-entry:
   store i32 2, i32* @irq, align 4
   store i32 2, i32* @global_id, align 4
   store i32 2, i32* @global_dev, align 4
-  %0 = load i32, i32* @global_dev, align 4
-  %cmp = icmp ne i32 %0, 2
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @global_dev, align 4
+  %2 = icmp ne i32 %1, 2
+  br i1 %2, label %3, label %4
 Facts: interval of dim (42,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -877,16 +875,16 @@ Facts: interval of dim (42,0):
       v9 in [-oo,+oo]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 287, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req2, i32 0, i32 0)) #3
   unreachable
 Facts: interval of dim (42,0): bottom
 
 BasicBlock: 
-if.end:                                           ; preds = %entry
-  %1 = load i32, i32* @irq, align 4
-  %cmp1 = icmp sgt i32 %1, -1
-  br i1 %cmp1, label %if.then2, label %if.end6
+; <label>:4                                       ; preds = %0
+  %5 = load i32, i32* @irq, align 4
+  %6 = icmp sgt i32 %5, -1
+  br i1 %6, label %7, label %12
 Facts: interval of dim (42,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -932,10 +930,16 @@ Facts: interval of dim (42,0):
       v9 in [-oo,+oo]
 
 BasicBlock: 
-if.then2:                                         ; preds = %if.end
-  %2 = load i32, i32* @global_id, align 4
-  %cmp3 = icmp ne i32 %2, 2
-  br i1 %cmp3, label %if.then4, label %if.end5
+; <label>:10                                      ; preds = %7
+  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 287, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req2, i32 0, i32 0)) #3
+  unreachable
+Facts: interval of dim (42,0): bottom
+
+BasicBlock: 
+; <label>:7                                       ; preds = %4
+  %8 = load i32, i32* @global_id, align 4
+  %9 = icmp ne i32 %8, 2
+  br i1 %9, label %10, label %11
 Facts: interval of dim (42,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -981,7 +985,7 @@ Facts: interval of dim (42,0):
       v9 in [1,1]
 
 BasicBlock: 
-if.end6:                                          ; preds = %if.end5, %if.end
+; <label>:12                                      ; preds = %11, %4
   store i32 -1, i32* @global_id, align 4
   store i32 -1, i32* @global_dev, align 4
   ret i8* undef
@@ -1030,14 +1034,8 @@ Facts: interval of dim (42,0):
       v9 in [1,1]
 
 BasicBlock: 
-if.then4:                                         ; preds = %if.then2
-  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 287, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req2, i32 0, i32 0)) #3
-  unreachable
-Facts: interval of dim (42,0): bottom
-
-BasicBlock: 
-if.end5:                                          ; preds = %if.then2
-  br label %if.end6
+; <label>:11                                      ; preds = %7
+  br label %12
 Facts: interval of dim (42,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -1085,7 +1083,168 @@ Facts: interval of dim (42,0):
 ======================
 ==== req3() Results ====
 BasicBlock: 
-if.end6:                                          ; preds = %if.end5, %if.end
+  store i32 3, i32* @irq, align 4
+  store i32 3, i32* @global_id, align 4
+  store i32 3, i32* @global_dev, align 4
+  %1 = load i32, i32* @global_dev, align 4
+  %2 = icmp ne i32 %1, 3
+  br i1 %2, label %3, label %4
+Facts: interval of dim (42,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+     v11 in [-oo,+oo]
+     v12 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [0,0]
+     v21 in [0,0]
+     v22 in [0,0]
+     v23 in [0,0]
+     v24 in [0,0]
+     v25 in [0,0]
+     v26 in [0,0]
+     v27 in [0,0]
+     v28 in [0,0]
+     v29 in [0,0]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+      v5 in [-oo,+oo]
+      v6 in [-oo,+oo]
+      v7 in [-oo,+oo]
+      v8 in [-oo,+oo]
+      v9 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:3                                       ; preds = %0
+  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 297, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req3, i32 0, i32 0)) #3
+  unreachable
+Facts: interval of dim (42,0): bottom
+
+BasicBlock: 
+; <label>:4                                       ; preds = %0
+  %5 = load i32, i32* @irq, align 4
+  %6 = icmp sgt i32 %5, -1
+  br i1 %6, label %7, label %12
+Facts: interval of dim (42,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+     v11 in [-oo,+oo]
+     v12 in [3,3]
+     v13 in [0,0]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [3,3]
+     v21 in [3,3]
+     v22 in [3,3]
+     v23 in [0,0]
+     v24 in [0,0]
+     v25 in [0,0]
+     v26 in [0,0]
+     v27 in [0,0]
+     v28 in [0,0]
+     v29 in [0,0]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+      v5 in [-oo,+oo]
+      v6 in [-oo,+oo]
+      v7 in [-oo,+oo]
+      v8 in [-oo,+oo]
+      v9 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:10                                      ; preds = %7
+  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 297, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req3, i32 0, i32 0)) #3
+  unreachable
+Facts: interval of dim (42,0): bottom
+
+BasicBlock: 
+; <label>:7                                       ; preds = %4
+  %8 = load i32, i32* @global_id, align 4
+  %9 = icmp ne i32 %8, 3
+  br i1 %9, label %10, label %11
+Facts: interval of dim (42,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+     v11 in [-oo,+oo]
+     v12 in [3,3]
+     v13 in [0,0]
+     v14 in [3,3]
+     v15 in [1,1]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [3,3]
+     v21 in [3,3]
+     v22 in [3,3]
+     v23 in [0,0]
+     v24 in [0,0]
+     v25 in [0,0]
+     v26 in [0,0]
+     v27 in [0,0]
+     v28 in [0,0]
+     v29 in [0,0]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+      v5 in [-oo,+oo]
+      v6 in [-oo,+oo]
+      v7 in [-oo,+oo]
+      v8 in [-oo,+oo]
+      v9 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:12                                      ; preds = %11, %4
   store i32 -1, i32* @global_id, align 4
   store i32 -1, i32* @global_dev, align 4
   ret i8* undef
@@ -1134,14 +1293,8 @@ Facts: interval of dim (42,0):
       v9 in [-oo,+oo]
 
 BasicBlock: 
-if.then4:                                         ; preds = %if.then2
-  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 297, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req3, i32 0, i32 0)) #3
-  unreachable
-Facts: interval of dim (42,0): bottom
-
-BasicBlock: 
-if.end5:                                          ; preds = %if.then2
-  br label %if.end6
+; <label>:11                                      ; preds = %7
+  br label %12
 Facts: interval of dim (42,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -1186,166 +1339,9 @@ Facts: interval of dim (42,0):
       v8 in [-oo,+oo]
       v9 in [-oo,+oo]
 
-BasicBlock: 
-entry:
-  store i32 3, i32* @irq, align 4
-  store i32 3, i32* @global_id, align 4
-  store i32 3, i32* @global_dev, align 4
-  %0 = load i32, i32* @global_dev, align 4
-  %cmp = icmp ne i32 %0, 3
-  br i1 %cmp, label %if.then, label %if.end
-Facts: interval of dim (42,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-     v11 in [-oo,+oo]
-     v12 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [0,0]
-     v21 in [0,0]
-     v22 in [0,0]
-     v23 in [0,0]
-     v24 in [0,0]
-     v25 in [0,0]
-     v26 in [0,0]
-     v27 in [0,0]
-     v28 in [0,0]
-     v29 in [0,0]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-      v5 in [-oo,+oo]
-      v6 in [-oo,+oo]
-      v7 in [-oo,+oo]
-      v8 in [-oo,+oo]
-      v9 in [-oo,+oo]
-
-BasicBlock: 
-if.then:                                          ; preds = %entry
-  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 297, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req3, i32 0, i32 0)) #3
-  unreachable
-Facts: interval of dim (42,0): bottom
-
-BasicBlock: 
-if.end:                                           ; preds = %entry
-  %1 = load i32, i32* @irq, align 4
-  %cmp1 = icmp sgt i32 %1, -1
-  br i1 %cmp1, label %if.then2, label %if.end6
-Facts: interval of dim (42,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-     v11 in [-oo,+oo]
-     v12 in [3,3]
-     v13 in [0,0]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [3,3]
-     v21 in [3,3]
-     v22 in [3,3]
-     v23 in [0,0]
-     v24 in [0,0]
-     v25 in [0,0]
-     v26 in [0,0]
-     v27 in [0,0]
-     v28 in [0,0]
-     v29 in [0,0]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-      v5 in [-oo,+oo]
-      v6 in [-oo,+oo]
-      v7 in [-oo,+oo]
-      v8 in [-oo,+oo]
-      v9 in [-oo,+oo]
-
-BasicBlock: 
-if.then2:                                         ; preds = %if.end
-  %2 = load i32, i32* @global_id, align 4
-  %cmp3 = icmp ne i32 %2, 3
-  br i1 %cmp3, label %if.then4, label %if.end5
-Facts: interval of dim (42,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-     v11 in [-oo,+oo]
-     v12 in [3,3]
-     v13 in [0,0]
-     v14 in [3,3]
-     v15 in [1,1]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [3,3]
-     v21 in [3,3]
-     v22 in [3,3]
-     v23 in [0,0]
-     v24 in [0,0]
-     v25 in [0,0]
-     v26 in [0,0]
-     v27 in [0,0]
-     v28 in [0,0]
-     v29 in [0,0]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-      v5 in [-oo,+oo]
-      v6 in [-oo,+oo]
-      v7 in [-oo,+oo]
-      v8 in [-oo,+oo]
-      v9 in [-oo,+oo]
-
 ======================
 ==== req4() Results ====
 BasicBlock: 
-entry:
   store i32 -1, i32* @irq, align 4
   ret i8* undef
 Facts: interval of dim (42,0):
@@ -1395,13 +1391,12 @@ Facts: interval of dim (42,0):
 ======================
 ==== main() Results ====
 BasicBlock: 
-entry:
   %t1 = alloca i64, align 8
   %t2 = alloca i64, align 8
-  %call = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @req1, i8* null) #3
-  %call1 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req2, i8* null) #3
-  %call2 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req3, i8* null) #3
-  %call3 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req4, i8* null) #3
+  %1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @req1, i8* null) #3
+  %2 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req2, i8* null) #3
+  %3 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req3, i8* null) #3
+  %4 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req4, i8* null) #3
   ret i32 0
 Facts: interval of dim (42,0):
       v0 in [-oo,+oo]

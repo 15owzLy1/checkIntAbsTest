@@ -14,17 +14,16 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: nounwind uwtable
 define i8* @f1(i8* %unused) #0 {
-entry:
   store i32 1, i32* @a, align 4
-  %0 = load i32, i32* @a, align 4
-  %cmp = icmp ne i32 %0, 1
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @a, align 4
+  %2 = icmp ne i32 %1, 1
+  br i1 %2, label %3, label %4
 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 21, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @__PRETTY_FUNCTION__.f1, i32 0, i32 0)) #3
   unreachable
 
-if.end:                                           ; preds = %entry
+; <label>:4                                       ; preds = %0
   ret i8* null
 }
 
@@ -33,48 +32,45 @@ declare void @__assert_fail(i8*, i8*, i32, i8*) #1
 
 ; Function Attrs: nounwind uwtable
 define i8* @f2(i8* %unused) #0 {
-entry:
   store i32 0, i32* @b, align 4
   store i32 2, i32* @a, align 4
-  %0 = load i32, i32* @b, align 4
-  %cmp = icmp ne i32 %0, 0
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @b, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %4
 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 37, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @__PRETTY_FUNCTION__.f2, i32 0, i32 0)) #3
   unreachable
 
-if.end:                                           ; preds = %entry
+; <label>:4                                       ; preds = %0
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @f3(i8* %unused) #0 {
-entry:
-  %0 = load i32, i32* @b, align 4
-  %inc = add nsw i32 %0, 1
-  store i32 %inc, i32* @b, align 4
   %1 = load i32, i32* @b, align 4
-  %cmp = icmp sle i32 %1, 0
-  br i1 %cmp, label %if.then, label %if.end
+  %2 = add nsw i32 %1, 1
+  store i32 %2, i32* @b, align 4
+  %3 = load i32, i32* @b, align 4
+  %4 = icmp sle i32 %3, 0
+  br i1 %4, label %5, label %6
 
-if.then:                                          ; preds = %entry
+; <label>:5                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 51, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @__PRETTY_FUNCTION__.f3, i32 0, i32 0)) #3
   unreachable
 
-if.end:                                           ; preds = %entry
+; <label>:6                                       ; preds = %0
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i32 @main() #0 {
-entry:
   %t1 = alloca i64, align 8
   %t2 = alloca i64, align 8
   %t3 = alloca i64, align 8
-  %call = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @f1, i8* null) #4
-  %call1 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @f2, i8* null) #4
-  %call2 = call i32 @pthread_create(i64* %t3, %union.pthread_attr_t* null, i8* (i8*)* @f3, i8* null) #4
+  %1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @f1, i8* null) #4
+  %2 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @f2, i8* null) #4
+  %3 = call i32 @pthread_create(i64* %t3, %union.pthread_attr_t* null, i8* (i8*)* @f3, i8* null) #4
   ret i32 0
 }
 

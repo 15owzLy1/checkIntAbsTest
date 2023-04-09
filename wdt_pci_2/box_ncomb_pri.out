@@ -460,7 +460,7 @@ Interference Iteration: 2
 Analyzing thread: 0
 ======================================
 ID of Load: 119
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 11
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -469,7 +469,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 119
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 51
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -478,7 +478,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 119
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 85
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -487,7 +487,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 119
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 130
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -496,7 +496,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 119
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 143
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -505,7 +505,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 125
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 9
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -513,7 +513,7 @@ Load is not completeLoad
 ======================================
 ======================================
 ID of Load: 125
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 49
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -521,7 +521,7 @@ Load is not completeLoad
 ======================================
 ======================================
 ID of Load: 125
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 83
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -530,7 +530,7 @@ Load is not completeLoad
 Analyzing thread: 1
 ======================================
 ID of Load: 132
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 11
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -539,7 +539,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 132
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 51
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -548,7 +548,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 132
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 85
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -557,7 +557,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 132
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 117
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -566,7 +566,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 132
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 143
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -575,7 +575,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 138
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 9
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -583,7 +583,7 @@ Load is not completeLoad
 ======================================
 ======================================
 ID of Load: 138
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 49
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -591,7 +591,7 @@ Load is not completeLoad
 ======================================
 ======================================
 ID of Load: 138
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 83
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -600,7 +600,7 @@ Load is not completeLoad
 Analyzing thread: 2
 ======================================
 ID of Load: 145
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 11
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -609,7 +609,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 145
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 51
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -618,7 +618,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 145
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 85
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -627,7 +627,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 145
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 117
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -636,7 +636,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 145
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 130
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -645,7 +645,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 151
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 9
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -653,7 +653,7 @@ Load is not completeLoad
 ======================================
 ======================================
 ID of Load: 151
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 49
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -661,7 +661,7 @@ Load is not completeLoad
 ======================================
 ======================================
 ID of Load: 151
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 83
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -670,7 +670,7 @@ Load is not completeLoad
 Analyzing thread: 3
 ======================================
 ID of Load: 12
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 51
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -679,7 +679,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 12
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 85
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -688,7 +688,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 12
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 117
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -697,7 +697,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 12
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 130
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -706,7 +706,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 12
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 143
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -715,7 +715,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 22
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 49
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -724,7 +724,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 22
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 83
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -733,7 +733,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 18
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 50
   store i32 42, i32* @expect_close, align 4
 St is nonLast
@@ -741,7 +741,7 @@ Load is completeLoad
 ======================================
 ======================================
 ID of Load: 18
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 81
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -750,7 +750,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 18
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 84
   store i32 42, i32* @expect_close, align 4
 St is nonLast
@@ -758,7 +758,7 @@ Load is completeLoad
 ======================================
 ======================================
 ID of Load: 18
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 115
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -767,7 +767,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 18
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 118
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -776,7 +776,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 18
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 131
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -785,7 +785,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 18
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 144
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -794,7 +794,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 33
-  %4 = load i8, i8* @wdtpci_lock, align 1
+  %21 = load i8, i8* @wdtpci_lock, align 1
 ID of Store: 77
   store i8 0, i8* @wdtpci_lock, align 1
 St is NOT nonLast
@@ -802,7 +802,7 @@ Load is not completeLoad
 ======================================
 ======================================
 ID of Load: 33
-  %4 = load i8, i8* @wdtpci_lock, align 1
+  %21 = load i8, i8* @wdtpci_lock, align 1
 ID of Store: 111
   store i8 0, i8* @wdtpci_lock, align 1
 St is NOT nonLast
@@ -811,7 +811,7 @@ Load is not completeLoad
 Analyzing thread: 4
 ======================================
 ID of Load: 52
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 11
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -820,7 +820,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 52
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 85
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -829,7 +829,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 52
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 117
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -838,7 +838,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 52
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 130
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -847,7 +847,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 52
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 143
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -856,7 +856,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 58
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 9
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -865,7 +865,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 58
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 83
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -874,7 +874,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 55
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 10
   store i32 42, i32* @expect_close, align 4
 St is nonLast
@@ -882,7 +882,7 @@ Load is completeLoad
 ======================================
 ======================================
 ID of Load: 55
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 47
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -891,7 +891,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 55
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 84
   store i32 42, i32* @expect_close, align 4
 St is nonLast
@@ -899,7 +899,7 @@ Load is completeLoad
 ======================================
 ======================================
 ID of Load: 55
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 115
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -908,7 +908,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 55
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 118
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -917,7 +917,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 55
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 131
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -926,7 +926,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 55
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 144
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -935,7 +935,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 69
-  %4 = load i8, i8* @wdtpci_lock, align 1
+  %21 = load i8, i8* @wdtpci_lock, align 1
 ID of Store: 43
   store i8 0, i8* @wdtpci_lock, align 1
 St is NOT nonLast
@@ -943,7 +943,7 @@ Load is not completeLoad
 ======================================
 ======================================
 ID of Load: 69
-  %4 = load i8, i8* @wdtpci_lock, align 1
+  %21 = load i8, i8* @wdtpci_lock, align 1
 ID of Store: 111
   store i8 0, i8* @wdtpci_lock, align 1
 St is NOT nonLast
@@ -951,69 +951,8 @@ Load is not completeLoad
 ======================================
 Analyzing thread: 5
 ======================================
-ID of Load: 89
-  %3 = load i32, i32* @expect_close, align 4
-ID of Store: 10
-  store i32 42, i32* @expect_close, align 4
-St is nonLast
-Load is completeLoad
-======================================
-======================================
-ID of Load: 89
-  %3 = load i32, i32* @expect_close, align 4
-ID of Store: 47
-  store i32 0, i32* @expect_close, align 4
-St is NOT nonLast
-Load is completeLoad
-st is higher than ld
-======================================
-======================================
-ID of Load: 89
-  %3 = load i32, i32* @expect_close, align 4
-ID of Store: 50
-  store i32 42, i32* @expect_close, align 4
-St is nonLast
-Load is completeLoad
-======================================
-======================================
-ID of Load: 89
-  %3 = load i32, i32* @expect_close, align 4
-ID of Store: 81
-  store i32 0, i32* @expect_close, align 4
-St is NOT nonLast
-Load is completeLoad
-st is higher than ld
-======================================
-======================================
-ID of Load: 89
-  %3 = load i32, i32* @expect_close, align 4
-ID of Store: 118
-  store i32 0, i32* @expect_close, align 4
-St is NOT nonLast
-Load is completeLoad
-st is higher than ld
-======================================
-======================================
-ID of Load: 89
-  %3 = load i32, i32* @expect_close, align 4
-ID of Store: 131
-  store i32 0, i32* @expect_close, align 4
-St is NOT nonLast
-Load is completeLoad
-st is higher than ld
-======================================
-======================================
-ID of Load: 89
-  %3 = load i32, i32* @expect_close, align 4
-ID of Store: 144
-  store i32 0, i32* @expect_close, align 4
-St is NOT nonLast
-Load is completeLoad
-st is higher than ld
-======================================
-======================================
 ID of Load: 86
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 11
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -1022,7 +961,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 86
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 51
   store i32 1, i32* @count, align 4
 St is NOT nonLast
@@ -1031,7 +970,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 86
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 117
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -1040,7 +979,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 86
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 130
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -1049,7 +988,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 86
-  %0 = load i32, i32* @count, align 4
+  %1 = load i32, i32* @count, align 4
 ID of Store: 143
   store i32 0, i32* @count, align 4
 St is NOT nonLast
@@ -1058,7 +997,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 92
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 9
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -1067,7 +1006,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 92
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
 ID of Store: 49
   store i8 86, i8* @wdtpci_write_buf, align 1
 St is NOT nonLast
@@ -1075,8 +1014,69 @@ Load is completeLoad
 st is higher than ld
 ======================================
 ======================================
+ID of Load: 89
+  %14 = load i32, i32* @expect_close, align 4
+ID of Store: 10
+  store i32 42, i32* @expect_close, align 4
+St is nonLast
+Load is completeLoad
+======================================
+======================================
+ID of Load: 89
+  %14 = load i32, i32* @expect_close, align 4
+ID of Store: 47
+  store i32 0, i32* @expect_close, align 4
+St is NOT nonLast
+Load is completeLoad
+st is higher than ld
+======================================
+======================================
+ID of Load: 89
+  %14 = load i32, i32* @expect_close, align 4
+ID of Store: 50
+  store i32 42, i32* @expect_close, align 4
+St is nonLast
+Load is completeLoad
+======================================
+======================================
+ID of Load: 89
+  %14 = load i32, i32* @expect_close, align 4
+ID of Store: 81
+  store i32 0, i32* @expect_close, align 4
+St is NOT nonLast
+Load is completeLoad
+st is higher than ld
+======================================
+======================================
+ID of Load: 89
+  %14 = load i32, i32* @expect_close, align 4
+ID of Store: 118
+  store i32 0, i32* @expect_close, align 4
+St is NOT nonLast
+Load is completeLoad
+st is higher than ld
+======================================
+======================================
+ID of Load: 89
+  %14 = load i32, i32* @expect_close, align 4
+ID of Store: 131
+  store i32 0, i32* @expect_close, align 4
+St is NOT nonLast
+Load is completeLoad
+st is higher than ld
+======================================
+======================================
+ID of Load: 89
+  %14 = load i32, i32* @expect_close, align 4
+ID of Store: 144
+  store i32 0, i32* @expect_close, align 4
+St is NOT nonLast
+Load is completeLoad
+st is higher than ld
+======================================
+======================================
 ID of Load: 103
-  %4 = load i8, i8* @wdtpci_lock, align 1
+  %21 = load i8, i8* @wdtpci_lock, align 1
 ID of Store: 43
   store i8 0, i8* @wdtpci_lock, align 1
 St is NOT nonLast
@@ -1084,7 +1084,7 @@ Load is not completeLoad
 ======================================
 ======================================
 ID of Load: 103
-  %4 = load i8, i8* @wdtpci_lock, align 1
+  %21 = load i8, i8* @wdtpci_lock, align 1
 ID of Store: 77
   store i8 0, i8* @wdtpci_lock, align 1
 St is NOT nonLast
@@ -1098,7 +1098,7 @@ Analyzing thread: 2
 Analyzing thread: 3
 ======================================
 ID of Load: 18
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 127
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -1107,7 +1107,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 18
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 140
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -1117,7 +1117,7 @@ st is not higher than ld
 Analyzing thread: 4
 ======================================
 ID of Load: 55
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 127
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -1126,7 +1126,7 @@ st is not higher than ld
 ======================================
 ======================================
 ID of Load: 55
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 140
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -1136,7 +1136,7 @@ st is not higher than ld
 Analyzing thread: 5
 ======================================
 ID of Load: 89
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 127
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -1145,7 +1145,7 @@ st is higher than ld
 ======================================
 ======================================
 ID of Load: 89
-  %3 = load i32, i32* @expect_close, align 4
+  %14 = load i32, i32* @expect_close, align 4
 ID of Store: 140
   store i32 0, i32* @expect_close, align 4
 St is NOT nonLast
@@ -1154,8 +1154,8 @@ st is higher than ld
 ======================================
 Analyzing thread: 6
 v58: @heartbeat = global i32 60, align 4
-v91: i8* %unused
-v11:   %5 = load i8, i8* @wdt_dc_port, align 1
+v93: i8* %unused
+v94: i8* %unused
 v66: @dev_count = common global i32 0, align 4
 v59: @nowayout = global i32 0, align 4
 v60: @wdtpci_write_buf = common global i8 0, align 1
@@ -1164,7 +1164,7 @@ v62: @count = common global i32 0, align 4
 v78: i8* %unused
 v63: @wdtpci_lock = common global i8 0, align 1
 v64: @wdt_dc_port = common global i8 0, align 1
-v0:   %0 = load i32, i32* @count, align 4
+v0:   %1 = load i32, i32* @count, align 4
 v65: @jiffies = common global i64 0, align 8
 v67: @open_sem = common global i32 0, align 4
 v68: @io = common global i32 0, align 4
@@ -1178,81 +1178,84 @@ v75: @cnt5 = common global i32 0, align 4
 v76: @cnt6 = common global i32 0, align 4
 v77: @buf = common global i32 0, align 4
 v105: i8* %unused
-v1:   %tobool = icmp ne i32 %0, 0
-v2:   %1 = load i32, i32* @nowayout, align 4
-v3:   %tobool1 = icmp ne i32 %1, 0
-v4:   %2 = load i8, i8* @wdtpci_write_buf, align 1
-v5:   %conv = sext i8 %2 to i32
-v6:   %cmp = icmp ne i32 %conv, 86
-v7:   %3 = load i32, i32* @expect_close, align 4
-v8:   %cmp7 = icmp ne i32 %3, 42
-v79: i8* %0
-v9:   %4 = load i8, i8* @wdtpci_lock, align 1
-v10:   %tobool11 = trunc i8 %4 to i1
-v87: i8* %unused
-v31:   %3 = load i32, i32* @expect_close, align 4
-v32:   %cmp7 = icmp ne i32 %3, 42
-v85: i8* %unused
 v80: i8* %1
+v1:   %2 = icmp ne i32 %1, 0
 v81: i32 %2
+v2:   %4 = load i32, i32* @nowayout, align 4
+v3:   %5 = icmp ne i32 %4, 0
+v4:   %7 = load i8, i8* @wdtpci_write_buf, align 1
+v5:   %8 = sext i8 %7 to i32
+v6:   %9 = icmp ne i32 %8, 86
+v79: i8* %0
+v84: i8* %unused
+v7:   %14 = load i32, i32* @expect_close, align 4
+v8:   %15 = icmp ne i32 %14, 42
+v9:   %21 = load i8, i8* @wdtpci_lock, align 1
+v10:   %22 = trunc i8 %21 to i1
+v11:   %26 = load i8, i8* @wdt_dc_port, align 1
 v82: i8* %3
 v83: i8* %unused
-v12:   %0 = load i32, i32* @count, align 4
-v13:   %tobool = icmp ne i32 %0, 0
-v14:   %1 = load i32, i32* @nowayout, align 4
-v15:   %tobool1 = icmp ne i32 %1, 0
-v16:   %2 = load i8, i8* @wdtpci_write_buf, align 1
-v17:   %conv = sext i8 %2 to i32
-v18:   %cmp = icmp ne i32 %conv, 86
-v19:   %3 = load i32, i32* @expect_close, align 4
-v20:   %cmp7 = icmp ne i32 %3, 42
-v84: i8* %unused
-v21:   %4 = load i8, i8* @wdtpci_lock, align 1
-v22:   %tobool11 = trunc i8 %4 to i1
+v12:   %1 = load i32, i32* @count, align 4
+v13:   %2 = icmp ne i32 %1, 0
 v86: i8* %unused
-v23:   %5 = load i8, i8* @wdt_dc_port, align 1
-v24:   %0 = load i32, i32* @count, align 4
-v25:   %tobool = icmp ne i32 %0, 0
-v26:   %1 = load i32, i32* @nowayout, align 4
-v27:   %tobool1 = icmp ne i32 %1, 0
-v28:   %2 = load i8, i8* @wdtpci_write_buf, align 1
-v29:   %conv = sext i8 %2 to i32
-v30:   %cmp = icmp ne i32 %conv, 86
+v14:   %4 = load i32, i32* @nowayout, align 4
+v15:   %5 = icmp ne i32 %4, 0
+v16:   %7 = load i8, i8* @wdtpci_write_buf, align 1
+v17:   %8 = sext i8 %7 to i32
+v18:   %9 = icmp ne i32 %8, 86
+v85: i8* %unused
+v19:   %14 = load i32, i32* @expect_close, align 4
+v20:   %15 = icmp ne i32 %14, 42
+v21:   %21 = load i8, i8* @wdtpci_lock, align 1
+v22:   %22 = trunc i8 %21 to i1
+v23:   %26 = load i8, i8* @wdt_dc_port, align 1
+v24:   %1 = load i32, i32* @count, align 4
+v25:   %2 = icmp ne i32 %1, 0
+v26:   %4 = load i32, i32* @nowayout, align 4
+v27:   %5 = icmp ne i32 %4, 0
+v88: i8* %unused
+v28:   %7 = load i8, i8* @wdtpci_write_buf, align 1
+v29:   %8 = sext i8 %7 to i32
+v30:   %9 = icmp ne i32 %8, 86
+v87: i8* %unused
+v31:   %14 = load i32, i32* @expect_close, align 4
+v32:   %15 = icmp ne i32 %14, 42
+v33:   %21 = load i8, i8* @wdtpci_lock, align 1
+v34:   %22 = trunc i8 %21 to i1
+v35:   %26 = load i8, i8* @wdt_dc_port, align 1
+v36:   %1 = load i32, i32* @count, align 4
+v37:   %2 = icmp ne i32 %1, 0
+v38:   %4 = load i32, i32* @nowayout, align 4
+v39:   %5 = icmp ne i32 %4, 0
+v40:   %7 = load i8, i8* @wdtpci_write_buf, align 1
+v41:   %8 = sext i8 %7 to i32
+v42:   %9 = icmp ne i32 %8, 86
+v92: i8* %unused
+v90: i8* %unused
+v43:   %1 = load i32, i32* @count, align 4
+v44:   %2 = icmp ne i32 %1, 0
+v45:   %4 = load i32, i32* @nowayout, align 4
+v46:   %5 = icmp ne i32 %4, 0
+v47:   %7 = load i8, i8* @wdtpci_write_buf, align 1
+v48:   %8 = sext i8 %7 to i32
+v49:   %9 = icmp ne i32 %8, 86
+v89: i8* %unused
+v50:   %1 = load i32, i32* @count, align 4
+v51:   %2 = icmp ne i32 %1, 0
+v52:   %4 = load i32, i32* @nowayout, align 4
+v53:   %5 = icmp ne i32 %4, 0
+v54:   %7 = load i8, i8* @wdtpci_write_buf, align 1
+v55:   %8 = sext i8 %7 to i32
+v56:   %9 = icmp ne i32 %8, 86
+v91: i8* %unused
+v117: %union.pthread_attr_t* %1
+v118: i8* (i8*)* %2
+v119: i8* %3
+v95: i8* %unused
+v96: i8* %unused
 v97: i8* %unused
 v98: i8* %unused
 v99: i8* %unused
-v33:   %4 = load i8, i8* @wdtpci_lock, align 1
-v34:   %tobool11 = trunc i8 %4 to i1
-v89: i8* %unused
-v35:   %5 = load i8, i8* @wdt_dc_port, align 1
-v36:   %0 = load i32, i32* @count, align 4
-v37:   %tobool = icmp ne i32 %0, 0
-v38:   %1 = load i32, i32* @nowayout, align 4
-v39:   %tobool1 = icmp ne i32 %1, 0
-v40:   %2 = load i8, i8* @wdtpci_write_buf, align 1
-v41:   %conv = sext i8 %2 to i32
-v42:   %cmp = icmp ne i32 %conv, 86
-v43:   %0 = load i32, i32* @count, align 4
-v44:   %tobool = icmp ne i32 %0, 0
-v45:   %1 = load i32, i32* @nowayout, align 4
-v46:   %tobool1 = icmp ne i32 %1, 0
-v47:   %2 = load i8, i8* @wdtpci_write_buf, align 1
-v48:   %conv = sext i8 %2 to i32
-v49:   %cmp = icmp ne i32 %conv, 86
-v88: i8* %unused
-v50:   %0 = load i32, i32* @count, align 4
-v51:   %tobool = icmp ne i32 %0, 0
-v52:   %1 = load i32, i32* @nowayout, align 4
-v53:   %tobool1 = icmp ne i32 %1, 0
-v54:   %2 = load i8, i8* @wdtpci_write_buf, align 1
-v55:   %conv = sext i8 %2 to i32
-v56:   %cmp = icmp ne i32 %conv, 86
-v90: i8* %unused
-v92: i8* %unused
-v93: i8* %unused
-v94: i8* %unused
-v95: i8* %unused
-v96: i8* %unused
 v100: i8* %unused
 v101: i8* %unused
 v102: i8* %unused
@@ -1268,532 +1271,17 @@ v112: i8* %unused
 v113: i8* %unused
 v114: i32 %argc
 v115: i8** %argv
+v120: i8* %0
 v57:   %t1 = alloca i64, align 8
 v116: i64* %0
-v120: i8* %0
-v117: %union.pthread_attr_t* %1
-v118: i8* (i8*)* %2
-v119: i8* %3
 ==== closer1() Results ====
 BasicBlock: 
-do.end:                                           ; preds = %while.end
-  %5 = load i8, i8* @wdt_dc_port, align 1
-  br label %do.body12
-Facts: interval of dim (121,0):
-      v0 in [1,1]
-      v1 in [1,1]
-     v10 in [0,0]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [0,0]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [0,0]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [86,86]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [86,86]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [0,0]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [42,42]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [0,0]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [0,0]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-do.body12:                                        ; preds = %do.end
-  br label %do.end13
-Facts: interval of dim (121,0):
-      v0 in [1,1]
-      v1 in [1,1]
-     v10 in [0,0]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [0,0]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [0,0]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [0,0]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [86,86]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [86,86]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [0,0]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [42,42]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [0,0]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [0,0]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-do.end13:                                         ; preds = %do.body12
-  br label %do.body14
-Facts: interval of dim (121,0):
-      v0 in [1,1]
-      v1 in [1,1]
-     v10 in [0,0]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [0,0]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [0,0]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [0,0]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [86,86]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [86,86]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [0,0]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [42,42]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [0,0]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [0,0]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-if.then9:                                         ; preds = %if.end6
-  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 969, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer1, i32 0, i32 0)) #4
-  unreachable
-Facts: interval of dim (121,0): bottom
-
-BasicBlock: 
-if.else:                                          ; preds = %if.end6
-  br label %do.body
-Facts: interval of dim (121,0):
-      v0 in [1,1]
-      v1 in [1,1]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [0,0]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [0,0]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [86,86]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [86,86]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [0,0]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [42,42]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [0,0]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-entry:
   store i8 86, i8* @wdtpci_write_buf, align 1
   store i32 42, i32* @expect_close, align 4
   store i32 1, i32* @count, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -1918,10 +1406,10 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 Facts: interval of dim (121,0):
       v0 in [1,1]
       v1 in [1,1]
@@ -2046,10 +1534,10 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end6:                                          ; preds = %if.end5, %entry
-  %3 = load i32, i32* @expect_close, align 4
-  %cmp7 = icmp ne i32 %3, 42
-  br i1 %cmp7, label %if.then9, label %if.else
+; <label>:13                                      ; preds = %12, %0
+  %14 = load i32, i32* @expect_close, align 4
+  %15 = icmp ne i32 %14, 42
+  br i1 %15, label %16, label %17
 Facts: interval of dim (121,0):
       v0 in [1,1]
       v1 in [1,1]
@@ -2174,8 +1662,14 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:10                                      ; preds = %6
+  store i32 0, i32* @expect_close, align 4
+  br label %11
+Facts: interval of dim (121,0): bottom
+
+BasicBlock: 
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 Facts: interval of dim (121,0):
       v0 in [1,1]
       v1 in [1,1]
@@ -2300,11 +1794,11 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 Facts: interval of dim (121,0):
       v0 in [1,1]
       v1 in [1,1]
@@ -2429,14 +1923,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then4:                                         ; preds = %if.then2
-  store i32 0, i32* @expect_close, align 4
-  br label %if.end
-Facts: interval of dim (121,0): bottom
-
-BasicBlock: 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 Facts: interval of dim (121,0):
       v0 in [1,1]
       v1 in [1,1]
@@ -2561,519 +2049,525 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.end15:                                         ; preds = %do.body14
-  br label %do.end16
-Facts: interval of dim (121,0):
-      v0 in [1,1]
-      v1 in [1,1]
-     v10 in [0,0]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [0,0]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [0,0]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [0,0]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [86,86]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [86,86]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [0,0]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [42,42]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [0,0]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [0,0]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-do.body:                                          ; preds = %if.else
-  br label %do.body10
-Facts: interval of dim (121,0):
-      v0 in [1,1]
-      v1 in [1,1]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [0,0]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [0,0]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [86,86]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [86,86]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [0,0]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [42,42]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [0,0]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-do.body10:                                        ; preds = %do.body
-  br label %while.cond
-Facts: interval of dim (121,0):
-      v0 in [1,1]
-      v1 in [1,1]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [0,0]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [0,0]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [86,86]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [86,86]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [0,0]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [42,42]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [0,0]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-while.cond:                                       ; preds = %while.body, %do.body10
-  %4 = load i8, i8* @wdtpci_lock, align 1
-  %tobool11 = trunc i8 %4 to i1
-  br i1 %tobool11, label %while.body, label %while.end
-Facts: interval of dim (121,0):
-      v0 in [1,1]
-      v1 in [1,1]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [0,0]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [0,0]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [86,86]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [86,86]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [0,0]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [42,42]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [0,0]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:16                                      ; preds = %13
+  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 969, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer1, i32 0, i32 0)) #4
+  unreachable
 Facts: interval of dim (121,0): bottom
 
 BasicBlock: 
-while.end:                                        ; preds = %while.cond
-  br label %do.end
+; <label>:17                                      ; preds = %13
+  br label %18
+Facts: interval of dim (121,0):
+      v0 in [1,1]
+      v1 in [1,1]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [0,0]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [0,0]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [86,86]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [86,86]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [0,0]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [42,42]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [0,0]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:18                                      ; preds = %17
+  br label %19
+Facts: interval of dim (121,0):
+      v0 in [1,1]
+      v1 in [1,1]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [0,0]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [0,0]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [86,86]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [86,86]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [0,0]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [42,42]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [0,0]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:19                                      ; preds = %18
+  br label %20
+Facts: interval of dim (121,0):
+      v0 in [1,1]
+      v1 in [1,1]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [0,0]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [0,0]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [86,86]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [86,86]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [0,0]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [42,42]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [0,0]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:20                                      ; preds = %23, %19
+  %21 = load i8, i8* @wdtpci_lock, align 1
+  %22 = trunc i8 %21 to i1
+  br i1 %22, label %23, label %24
+Facts: interval of dim (121,0):
+      v0 in [1,1]
+      v1 in [1,1]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [0,0]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [0,0]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [86,86]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [86,86]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [0,0]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [42,42]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [0,0]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:23                                      ; preds = %20
+  br label %20
+Facts: interval of dim (121,0): bottom
+
+BasicBlock: 
+; <label>:24                                      ; preds = %20
+  br label %25
 Facts: interval of dim (121,0):
       v0 in [1,1]
       v1 in [1,1]
@@ -3198,9 +2692,388 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.body14:                                        ; preds = %do.end13
+; <label>:25                                      ; preds = %24
+  %26 = load i8, i8* @wdt_dc_port, align 1
+  br label %27
+Facts: interval of dim (121,0):
+      v0 in [1,1]
+      v1 in [1,1]
+     v10 in [0,0]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [0,0]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [0,0]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [86,86]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [86,86]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [0,0]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [42,42]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [0,0]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [0,0]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:27                                      ; preds = %25
+  br label %28
+Facts: interval of dim (121,0):
+      v0 in [1,1]
+      v1 in [1,1]
+     v10 in [0,0]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [0,0]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [0,0]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [0,0]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [86,86]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [86,86]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [0,0]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [42,42]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [0,0]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [0,0]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:28                                      ; preds = %27
+  br label %29
+Facts: interval of dim (121,0):
+      v0 in [1,1]
+      v1 in [1,1]
+     v10 in [0,0]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [0,0]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [0,0]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [0,0]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [86,86]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [86,86]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [0,0]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [42,42]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [0,0]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [0,0]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:29                                      ; preds = %28
   store i8 0, i8* @wdtpci_lock, align 1
-  br label %do.end15
+  br label %30
 Facts: interval of dim (121,0):
       v0 in [1,1]
       v1 in [1,1]
@@ -3325,8 +3198,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.end16:                                         ; preds = %do.end15
-  br label %if.end17
+; <label>:30                                      ; preds = %29
+  br label %31
 Facts: interval of dim (121,0):
       v0 in [1,1]
       v1 in [1,1]
@@ -3451,7 +3324,133 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end17:                                         ; preds = %do.end16
+; <label>:31                                      ; preds = %30
+  br label %32
+Facts: interval of dim (121,0):
+      v0 in [1,1]
+      v1 in [1,1]
+     v10 in [0,0]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [0,0]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [0,0]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [0,0]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [86,86]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [86,86]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [0,0]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [42,42]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [0,0]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [0,0]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:32                                      ; preds = %31
   store i32 0, i32* @expect_close, align 4
   ret i8* null
 Facts: interval of dim (121,0):
@@ -3580,145 +3579,12 @@ Facts: interval of dim (121,0):
 ======================
 ==== closer2() Results ====
 BasicBlock: 
-if.then9:                                         ; preds = %if.end6
-  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 1002, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer2, i32 0, i32 0)) #4
-  unreachable
-Facts: interval of dim (121,0): bottom
-
-BasicBlock: 
-if.else:                                          ; preds = %if.end6
-  br label %do.body
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [1,1]
-    v120 in [-oo,+oo]
-     v13 in [1,1]
-     v14 in [0,0]
-     v15 in [0,0]
-     v16 in [86,86]
-     v17 in [86,86]
-     v18 in [0,0]
-     v19 in [42,42]
-      v2 in [-oo,+oo]
-     v20 in [0,0]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-entry:
   store i8 86, i8* @wdtpci_write_buf, align 1
   store i32 42, i32* @expect_close, align 4
   store i32 1, i32* @count, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -3843,10 +3709,10 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -3971,10 +3837,10 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end6:                                          ; preds = %if.end5, %entry
-  %3 = load i32, i32* @expect_close, align 4
-  %cmp7 = icmp ne i32 %3, 42
-  br i1 %cmp7, label %if.then9, label %if.else
+; <label>:13                                      ; preds = %12, %0
+  %14 = load i32, i32* @expect_close, align 4
+  %15 = icmp ne i32 %14, 42
+  br i1 %15, label %16, label %17
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -4099,8 +3965,14 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:10                                      ; preds = %6
+  store i32 0, i32* @expect_close, align 4
+  br label %11
+Facts: interval of dim (121,0): bottom
+
+BasicBlock: 
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -4225,11 +4097,11 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -4354,14 +4226,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then4:                                         ; preds = %if.then2
-  store i32 0, i32* @expect_close, align 4
-  br label %if.end
-Facts: interval of dim (121,0): bottom
-
-BasicBlock: 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -4486,519 +4352,525 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.end15:                                         ; preds = %do.body14
-  br label %do.end16
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [1,1]
-    v120 in [-oo,+oo]
-     v13 in [1,1]
-     v14 in [0,0]
-     v15 in [0,0]
-     v16 in [86,86]
-     v17 in [86,86]
-     v18 in [0,0]
-     v19 in [42,42]
-      v2 in [-oo,+oo]
-     v20 in [0,0]
-     v21 in [0,0]
-     v22 in [0,0]
-     v23 in [0,0]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-do.body:                                          ; preds = %if.else
-  br label %do.body10
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [1,1]
-    v120 in [-oo,+oo]
-     v13 in [1,1]
-     v14 in [0,0]
-     v15 in [0,0]
-     v16 in [86,86]
-     v17 in [86,86]
-     v18 in [0,0]
-     v19 in [42,42]
-      v2 in [-oo,+oo]
-     v20 in [0,0]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-do.body10:                                        ; preds = %do.body
-  br label %while.cond
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [1,1]
-    v120 in [-oo,+oo]
-     v13 in [1,1]
-     v14 in [0,0]
-     v15 in [0,0]
-     v16 in [86,86]
-     v17 in [86,86]
-     v18 in [0,0]
-     v19 in [42,42]
-      v2 in [-oo,+oo]
-     v20 in [0,0]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-while.cond:                                       ; preds = %while.body, %do.body10
-  %4 = load i8, i8* @wdtpci_lock, align 1
-  %tobool11 = trunc i8 %4 to i1
-  br i1 %tobool11, label %while.body, label %while.end
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [1,1]
-    v120 in [-oo,+oo]
-     v13 in [1,1]
-     v14 in [0,0]
-     v15 in [0,0]
-     v16 in [86,86]
-     v17 in [86,86]
-     v18 in [0,0]
-     v19 in [42,42]
-      v2 in [-oo,+oo]
-     v20 in [0,0]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [1,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:16                                      ; preds = %13
+  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 1002, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer2, i32 0, i32 0)) #4
+  unreachable
 Facts: interval of dim (121,0): bottom
 
 BasicBlock: 
-while.end:                                        ; preds = %while.cond
-  br label %do.end
+; <label>:17                                      ; preds = %13
+  br label %18
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [1,1]
+    v120 in [-oo,+oo]
+     v13 in [1,1]
+     v14 in [0,0]
+     v15 in [0,0]
+     v16 in [86,86]
+     v17 in [86,86]
+     v18 in [0,0]
+     v19 in [42,42]
+      v2 in [-oo,+oo]
+     v20 in [0,0]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:18                                      ; preds = %17
+  br label %19
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [1,1]
+    v120 in [-oo,+oo]
+     v13 in [1,1]
+     v14 in [0,0]
+     v15 in [0,0]
+     v16 in [86,86]
+     v17 in [86,86]
+     v18 in [0,0]
+     v19 in [42,42]
+      v2 in [-oo,+oo]
+     v20 in [0,0]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:19                                      ; preds = %18
+  br label %20
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [1,1]
+    v120 in [-oo,+oo]
+     v13 in [1,1]
+     v14 in [0,0]
+     v15 in [0,0]
+     v16 in [86,86]
+     v17 in [86,86]
+     v18 in [0,0]
+     v19 in [42,42]
+      v2 in [-oo,+oo]
+     v20 in [0,0]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:20                                      ; preds = %23, %19
+  %21 = load i8, i8* @wdtpci_lock, align 1
+  %22 = trunc i8 %21 to i1
+  br i1 %22, label %23, label %24
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [1,1]
+    v120 in [-oo,+oo]
+     v13 in [1,1]
+     v14 in [0,0]
+     v15 in [0,0]
+     v16 in [86,86]
+     v17 in [86,86]
+     v18 in [0,0]
+     v19 in [42,42]
+      v2 in [-oo,+oo]
+     v20 in [0,0]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:23                                      ; preds = %20
+  br label %20
+Facts: interval of dim (121,0): bottom
+
+BasicBlock: 
+; <label>:24                                      ; preds = %20
+  br label %25
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -5123,9 +4995,9 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.end:                                           ; preds = %while.end
-  %5 = load i8, i8* @wdt_dc_port, align 1
-  br label %do.body12
+; <label>:25                                      ; preds = %24
+  %26 = load i8, i8* @wdt_dc_port, align 1
+  br label %27
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -5250,8 +5122,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.body12:                                        ; preds = %do.end
-  br label %do.end13
+; <label>:27                                      ; preds = %25
+  br label %28
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -5376,8 +5248,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.end13:                                         ; preds = %do.body12
-  br label %do.body14
+; <label>:28                                      ; preds = %27
+  br label %29
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -5502,9 +5374,9 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.body14:                                        ; preds = %do.end13
+; <label>:29                                      ; preds = %28
   store i8 0, i8* @wdtpci_lock, align 1
-  br label %do.end15
+  br label %30
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -5629,8 +5501,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.end16:                                         ; preds = %do.end15
-  br label %if.end17
+; <label>:30                                      ; preds = %29
+  br label %31
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -5755,7 +5627,133 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end17:                                         ; preds = %do.end16
+; <label>:31                                      ; preds = %30
+  br label %32
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [1,1]
+    v120 in [-oo,+oo]
+     v13 in [1,1]
+     v14 in [0,0]
+     v15 in [0,0]
+     v16 in [86,86]
+     v17 in [86,86]
+     v18 in [0,0]
+     v19 in [42,42]
+      v2 in [-oo,+oo]
+     v20 in [0,0]
+     v21 in [0,0]
+     v22 in [0,0]
+     v23 in [0,0]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [1,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:32                                      ; preds = %31
   store i32 0, i32* @expect_close, align 4
   ret i8* null
 Facts: interval of dim (121,0):
@@ -5884,518 +5882,12 @@ Facts: interval of dim (121,0):
 ======================
 ==== closer3() Results ====
 BasicBlock: 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [0,1]
-     v25 in [1,1]
-     v26 in [0,0]
-     v27 in [0,0]
-     v28 in [86,86]
-     v29 in [86,86]
-      v3 in [-oo,+oo]
-     v30 in [0,0]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-do.end15:                                         ; preds = %do.body14
-  br label %do.end16
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [0,1]
-     v25 in [0,1]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [42,42]
-     v32 in [0,0]
-     v33 in [0,0]
-     v34 in [0,0]
-     v35 in [0,0]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [0,42]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-if.then9:                                         ; preds = %if.end6
-  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 1036, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer3, i32 0, i32 0)) #4
-  unreachable
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [0,1]
-     v25 in [1,1]
-     v26 in [0,0]
-     v27 in [0,0]
-     v28 in [86,86]
-     v29 in [86,86]
-      v3 in [-oo,+oo]
-     v30 in [0,0]
-     v31 in [0,42]
-     v32 in [1,1]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [0,42]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-if.else:                                          ; preds = %if.end6
-  br label %do.body
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [0,1]
-     v25 in [1,1]
-     v26 in [0,0]
-     v27 in [0,0]
-     v28 in [86,86]
-     v29 in [86,86]
-      v3 in [-oo,+oo]
-     v30 in [0,0]
-     v31 in [42,42]
-     v32 in [0,0]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [0,42]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-entry:
   store i8 86, i8* @wdtpci_write_buf, align 1
   store i32 42, i32* @expect_close, align 4
   store i32 1, i32* @count, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -6520,10 +6012,10 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -6648,10 +6140,10 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end6:                                          ; preds = %if.end5, %entry
-  %3 = load i32, i32* @expect_close, align 4
-  %cmp7 = icmp ne i32 %3, 42
-  br i1 %cmp7, label %if.then9, label %if.else
+; <label>:13                                      ; preds = %12, %0
+  %14 = load i32, i32* @expect_close, align 4
+  %15 = icmp ne i32 %14, 42
+  br i1 %15, label %16, label %17
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -6776,269 +6268,522 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [0,1]
-     v25 in [1,1]
-     v26 in [0,0]
-     v27 in [0,0]
-     v28 in [86,86]
-     v29 in [86,86]
-      v3 in [-oo,+oo]
-     v30 in [0,0]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [0,1]
-     v25 in [1,1]
-     v26 in [0,0]
-     v27 in [0,0]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [86,86]
-     v61 in [42,42]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 Facts: interval of dim (121,0): bottom
 
 BasicBlock: 
-do.body:                                          ; preds = %if.else
-  br label %do.body10
+; <label>:12                                      ; preds = %11, %3
+  br label %13
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [0,1]
+     v25 in [1,1]
+     v26 in [0,0]
+     v27 in [0,0]
+     v28 in [86,86]
+     v29 in [86,86]
+      v3 in [-oo,+oo]
+     v30 in [0,0]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [0,1]
+     v25 in [1,1]
+     v26 in [0,0]
+     v27 in [0,0]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:11                                      ; preds = %10, %6
+  br label %12
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [0,1]
+     v25 in [1,1]
+     v26 in [0,0]
+     v27 in [0,0]
+     v28 in [86,86]
+     v29 in [86,86]
+      v3 in [-oo,+oo]
+     v30 in [0,0]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [42,42]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:16                                      ; preds = %13
+  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 1036, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer3, i32 0, i32 0)) #4
+  unreachable
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [0,1]
+     v25 in [0,1]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [0,42]
+     v32 in [1,1]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [0,42]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:17                                      ; preds = %13
+  br label %18
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -7163,8 +6908,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.body10:                                        ; preds = %do.body
-  br label %while.cond
+; <label>:18                                      ; preds = %17
+  br label %19
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -7289,10 +7034,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-while.cond:                                       ; preds = %while.body, %do.body10
-  %4 = load i8, i8* @wdtpci_lock, align 1
-  %tobool11 = trunc i8 %4 to i1
-  br i1 %tobool11, label %while.body, label %while.end
+; <label>:19                                      ; preds = %18
+  br label %20
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -7417,13 +7160,141 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:20                                      ; preds = %23, %19
+  %21 = load i8, i8* @wdtpci_lock, align 1
+  %22 = trunc i8 %21 to i1
+  br i1 %22, label %23, label %24
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [0,1]
+     v25 in [0,1]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [42,42]
+     v32 in [0,0]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [0,42]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:23                                      ; preds = %20
+  br label %20
 Facts: interval of dim (121,0): bottom
 
 BasicBlock: 
-while.end:                                        ; preds = %while.cond
-  br label %do.end
+; <label>:24                                      ; preds = %20
+  br label %25
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -7548,9 +7419,9 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.end:                                           ; preds = %while.end
-  %5 = load i8, i8* @wdt_dc_port, align 1
-  br label %do.body12
+; <label>:25                                      ; preds = %24
+  %26 = load i8, i8* @wdt_dc_port, align 1
+  br label %27
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -7675,8 +7546,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.body12:                                        ; preds = %do.end
-  br label %do.end13
+; <label>:27                                      ; preds = %25
+  br label %28
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -7801,8 +7672,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.end13:                                         ; preds = %do.body12
-  br label %do.body14
+; <label>:28                                      ; preds = %27
+  br label %29
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -7927,9 +7798,9 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.body14:                                        ; preds = %do.end13
+; <label>:29                                      ; preds = %28
   store i8 0, i8* @wdtpci_lock, align 1
-  br label %do.end15
+  br label %30
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -8054,8 +7925,8 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-do.end16:                                         ; preds = %do.end15
-  br label %if.end17
+; <label>:30                                      ; preds = %29
+  br label %31
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -8180,7 +8051,133 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end17:                                         ; preds = %do.end16
+; <label>:31                                      ; preds = %30
+  br label %32
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [0,1]
+     v25 in [0,1]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [42,42]
+     v32 in [0,0]
+     v33 in [0,0]
+     v34 in [0,0]
+     v35 in [0,0]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [86,86]
+     v61 in [0,42]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:32                                      ; preds = %31
   store i32 0, i32* @expect_close, align 4
   ret i8* null
 Facts: interval of dim (121,0):
@@ -8309,12 +8306,11 @@ Facts: interval of dim (121,0):
 ======================
 ==== writer1() Results ====
 BasicBlock: 
-entry:
   store i32 0, i32* @count, align 4
   store i32 0, i32* @expect_close, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -8439,10 +8435,10 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -8567,7 +8563,7 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end6:                                          ; preds = %if.end5, %entry
+; <label>:13                                      ; preds = %12, %0
   ret i8* null
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
@@ -8693,264 +8689,9 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [0,1]
-     v37 in [1,1]
-     v38 in [0,0]
-     v39 in [0,0]
-      v4 in [-oo,+oo]
-     v40 in [0,86]
-     v41 in [0,86]
-     v42 in [0,1]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [0,86]
-     v61 in [0,0]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [0,1]
-     v37 in [1,1]
-     v38 in [0,0]
-     v39 in [0,0]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [-oo,+oo]
-     v44 in [-oo,+oo]
-     v45 in [-oo,+oo]
-     v46 in [-oo,+oo]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [0,0]
-     v61 in [0,0]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -9075,8 +8816,263 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:12                                      ; preds = %11, %3
+  br label %13
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [0,1]
+     v37 in [1,1]
+     v38 in [0,0]
+     v39 in [0,0]
+      v4 in [-oo,+oo]
+     v40 in [0,86]
+     v41 in [0,86]
+     v42 in [0,1]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [0,86]
+     v61 in [0,0]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [0,1]
+     v37 in [1,1]
+     v38 in [0,0]
+     v39 in [0,0]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [-oo,+oo]
+     v44 in [-oo,+oo]
+     v45 in [-oo,+oo]
+     v46 in [-oo,+oo]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [0,0]
+     v61 in [0,0]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -9203,12 +9199,11 @@ Facts: interval of dim (121,0):
 ======================
 ==== writer2() Results ====
 BasicBlock: 
-entry:
   store i32 0, i32* @count, align 4
   store i32 0, i32* @expect_close, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -9333,10 +9328,10 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -9461,7 +9456,7 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end6:                                          ; preds = %if.end5, %entry
+; <label>:13                                      ; preds = %12, %0
   ret i8* null
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
@@ -9587,264 +9582,9 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [0,1]
-     v44 in [1,1]
-     v45 in [0,0]
-     v46 in [0,0]
-     v47 in [0,86]
-     v48 in [0,86]
-     v49 in [0,1]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [0,86]
-     v61 in [0,0]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
-Facts: interval of dim (121,0):
-      v0 in [-oo,+oo]
-      v1 in [-oo,+oo]
-     v10 in [-oo,+oo]
-    v100 in [-oo,+oo]
-    v101 in [-oo,+oo]
-    v102 in [-oo,+oo]
-    v103 in [-oo,+oo]
-    v104 in [-oo,+oo]
-    v105 in [-oo,+oo]
-    v106 in [-oo,+oo]
-    v107 in [-oo,+oo]
-    v108 in [-oo,+oo]
-    v109 in [-oo,+oo]
-     v11 in [-oo,+oo]
-    v110 in [-oo,+oo]
-    v111 in [-oo,+oo]
-    v112 in [-oo,+oo]
-    v113 in [-oo,+oo]
-    v114 in [-oo,+oo]
-    v115 in [-oo,+oo]
-    v116 in [-oo,+oo]
-    v117 in [-oo,+oo]
-    v118 in [-oo,+oo]
-    v119 in [-oo,+oo]
-     v12 in [-oo,+oo]
-    v120 in [-oo,+oo]
-     v13 in [-oo,+oo]
-     v14 in [-oo,+oo]
-     v15 in [-oo,+oo]
-     v16 in [-oo,+oo]
-     v17 in [-oo,+oo]
-     v18 in [-oo,+oo]
-     v19 in [-oo,+oo]
-      v2 in [-oo,+oo]
-     v20 in [-oo,+oo]
-     v21 in [-oo,+oo]
-     v22 in [-oo,+oo]
-     v23 in [-oo,+oo]
-     v24 in [-oo,+oo]
-     v25 in [-oo,+oo]
-     v26 in [-oo,+oo]
-     v27 in [-oo,+oo]
-     v28 in [-oo,+oo]
-     v29 in [-oo,+oo]
-      v3 in [-oo,+oo]
-     v30 in [-oo,+oo]
-     v31 in [-oo,+oo]
-     v32 in [-oo,+oo]
-     v33 in [-oo,+oo]
-     v34 in [-oo,+oo]
-     v35 in [-oo,+oo]
-     v36 in [-oo,+oo]
-     v37 in [-oo,+oo]
-     v38 in [-oo,+oo]
-     v39 in [-oo,+oo]
-      v4 in [-oo,+oo]
-     v40 in [-oo,+oo]
-     v41 in [-oo,+oo]
-     v42 in [-oo,+oo]
-     v43 in [0,1]
-     v44 in [1,1]
-     v45 in [0,0]
-     v46 in [0,0]
-     v47 in [-oo,+oo]
-     v48 in [-oo,+oo]
-     v49 in [-oo,+oo]
-      v5 in [-oo,+oo]
-     v50 in [-oo,+oo]
-     v51 in [-oo,+oo]
-     v52 in [-oo,+oo]
-     v53 in [-oo,+oo]
-     v54 in [-oo,+oo]
-     v55 in [-oo,+oo]
-     v56 in [-oo,+oo]
-     v57 in [-oo,+oo]
-     v58 in [60,60]
-     v59 in [0,0]
-      v6 in [-oo,+oo]
-     v60 in [0,0]
-     v61 in [0,0]
-     v62 in [0,1]
-     v63 in [0,0]
-     v64 in [0,0]
-     v65 in [0,0]
-     v66 in [0,0]
-     v67 in [0,0]
-     v68 in [0,0]
-     v69 in [0,0]
-      v7 in [-oo,+oo]
-     v70 in [0,0]
-     v71 in [0,0]
-     v72 in [0,0]
-     v73 in [0,0]
-     v74 in [0,0]
-     v75 in [0,0]
-     v76 in [0,0]
-     v77 in [0,0]
-     v78 in [-oo,+oo]
-     v79 in [-oo,+oo]
-      v8 in [-oo,+oo]
-     v80 in [-oo,+oo]
-     v81 in [-oo,+oo]
-     v82 in [-oo,+oo]
-     v83 in [-oo,+oo]
-     v84 in [-oo,+oo]
-     v85 in [-oo,+oo]
-     v86 in [-oo,+oo]
-     v87 in [-oo,+oo]
-     v88 in [-oo,+oo]
-     v89 in [-oo,+oo]
-      v9 in [-oo,+oo]
-     v90 in [-oo,+oo]
-     v91 in [-oo,+oo]
-     v92 in [-oo,+oo]
-     v93 in [-oo,+oo]
-     v94 in [-oo,+oo]
-     v95 in [-oo,+oo]
-     v96 in [-oo,+oo]
-     v97 in [-oo,+oo]
-     v98 in [-oo,+oo]
-     v99 in [-oo,+oo]
-
-BasicBlock: 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -9969,8 +9709,263 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:12                                      ; preds = %11, %3
+  br label %13
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [0,1]
+     v44 in [1,1]
+     v45 in [0,0]
+     v46 in [0,0]
+     v47 in [0,86]
+     v48 in [0,86]
+     v49 in [0,1]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [0,86]
+     v61 in [0,0]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
+Facts: interval of dim (121,0):
+      v0 in [-oo,+oo]
+      v1 in [-oo,+oo]
+     v10 in [-oo,+oo]
+    v100 in [-oo,+oo]
+    v101 in [-oo,+oo]
+    v102 in [-oo,+oo]
+    v103 in [-oo,+oo]
+    v104 in [-oo,+oo]
+    v105 in [-oo,+oo]
+    v106 in [-oo,+oo]
+    v107 in [-oo,+oo]
+    v108 in [-oo,+oo]
+    v109 in [-oo,+oo]
+     v11 in [-oo,+oo]
+    v110 in [-oo,+oo]
+    v111 in [-oo,+oo]
+    v112 in [-oo,+oo]
+    v113 in [-oo,+oo]
+    v114 in [-oo,+oo]
+    v115 in [-oo,+oo]
+    v116 in [-oo,+oo]
+    v117 in [-oo,+oo]
+    v118 in [-oo,+oo]
+    v119 in [-oo,+oo]
+     v12 in [-oo,+oo]
+    v120 in [-oo,+oo]
+     v13 in [-oo,+oo]
+     v14 in [-oo,+oo]
+     v15 in [-oo,+oo]
+     v16 in [-oo,+oo]
+     v17 in [-oo,+oo]
+     v18 in [-oo,+oo]
+     v19 in [-oo,+oo]
+      v2 in [-oo,+oo]
+     v20 in [-oo,+oo]
+     v21 in [-oo,+oo]
+     v22 in [-oo,+oo]
+     v23 in [-oo,+oo]
+     v24 in [-oo,+oo]
+     v25 in [-oo,+oo]
+     v26 in [-oo,+oo]
+     v27 in [-oo,+oo]
+     v28 in [-oo,+oo]
+     v29 in [-oo,+oo]
+      v3 in [-oo,+oo]
+     v30 in [-oo,+oo]
+     v31 in [-oo,+oo]
+     v32 in [-oo,+oo]
+     v33 in [-oo,+oo]
+     v34 in [-oo,+oo]
+     v35 in [-oo,+oo]
+     v36 in [-oo,+oo]
+     v37 in [-oo,+oo]
+     v38 in [-oo,+oo]
+     v39 in [-oo,+oo]
+      v4 in [-oo,+oo]
+     v40 in [-oo,+oo]
+     v41 in [-oo,+oo]
+     v42 in [-oo,+oo]
+     v43 in [0,1]
+     v44 in [1,1]
+     v45 in [0,0]
+     v46 in [0,0]
+     v47 in [-oo,+oo]
+     v48 in [-oo,+oo]
+     v49 in [-oo,+oo]
+      v5 in [-oo,+oo]
+     v50 in [-oo,+oo]
+     v51 in [-oo,+oo]
+     v52 in [-oo,+oo]
+     v53 in [-oo,+oo]
+     v54 in [-oo,+oo]
+     v55 in [-oo,+oo]
+     v56 in [-oo,+oo]
+     v57 in [-oo,+oo]
+     v58 in [60,60]
+     v59 in [0,0]
+      v6 in [-oo,+oo]
+     v60 in [0,0]
+     v61 in [0,0]
+     v62 in [0,1]
+     v63 in [0,0]
+     v64 in [0,0]
+     v65 in [0,0]
+     v66 in [0,0]
+     v67 in [0,0]
+     v68 in [0,0]
+     v69 in [0,0]
+      v7 in [-oo,+oo]
+     v70 in [0,0]
+     v71 in [0,0]
+     v72 in [0,0]
+     v73 in [0,0]
+     v74 in [0,0]
+     v75 in [0,0]
+     v76 in [0,0]
+     v77 in [0,0]
+     v78 in [-oo,+oo]
+     v79 in [-oo,+oo]
+      v8 in [-oo,+oo]
+     v80 in [-oo,+oo]
+     v81 in [-oo,+oo]
+     v82 in [-oo,+oo]
+     v83 in [-oo,+oo]
+     v84 in [-oo,+oo]
+     v85 in [-oo,+oo]
+     v86 in [-oo,+oo]
+     v87 in [-oo,+oo]
+     v88 in [-oo,+oo]
+     v89 in [-oo,+oo]
+      v9 in [-oo,+oo]
+     v90 in [-oo,+oo]
+     v91 in [-oo,+oo]
+     v92 in [-oo,+oo]
+     v93 in [-oo,+oo]
+     v94 in [-oo,+oo]
+     v95 in [-oo,+oo]
+     v96 in [-oo,+oo]
+     v97 in [-oo,+oo]
+     v98 in [-oo,+oo]
+     v99 in [-oo,+oo]
+
+BasicBlock: 
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -10097,12 +10092,11 @@ Facts: interval of dim (121,0):
 ======================
 ==== writer3() Results ====
 BasicBlock: 
-entry:
   store i32 0, i32* @count, align 4
   store i32 0, i32* @expect_close, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -10227,14 +10221,14 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 Facts: interval of dim (121,0): bottom
 
 BasicBlock: 
-if.end6:                                          ; preds = %if.end5, %entry
+; <label>:13                                      ; preds = %12, %0
   ret i8* null
 Facts: interval of dim (121,0):
       v0 in [-oo,+oo]
@@ -10360,40 +10354,43 @@ Facts: interval of dim (121,0):
      v99 in [-oo,+oo]
 
 BasicBlock: 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
-Facts: interval of dim (121,0): bottom
-
-BasicBlock: 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
-Facts: interval of dim (121,0): bottom
-
-BasicBlock: 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 Facts: interval of dim (121,0): bottom
 
 BasicBlock: 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:12                                      ; preds = %11, %3
+  br label %13
+Facts: interval of dim (121,0): bottom
+
+BasicBlock: 
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
+Facts: interval of dim (121,0): bottom
+
+BasicBlock: 
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 Facts: interval of dim (121,0): bottom
 
 ======================
 ==== main() Results ====
+BasicBlock:                                                   ; No predecessors!
+  ret i32 0
+Facts: interval of dim (121,0): bottom
+
 BasicBlock: 
-entry:
   %t1 = alloca i64, align 8
-  %call = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer1, i8* null) #4
-  %call1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer2, i8* null) #4
-  %call2 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer3, i8* null) #4
-  %call3 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer1, i8* null) #4
-  %call4 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer2, i8* null) #4
-  %call5 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer3, i8* null) #4
+  %1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer1, i8* null) #4
+  %2 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer2, i8* null) #4
+  %3 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer3, i8* null) #4
+  %4 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer1, i8* null) #4
+  %5 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer2, i8* null) #4
+  %6 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer3, i8* null) #4
   call void @pthread_exit(i8* null) #5
   unreachable
 Facts: interval of dim (121,0):
@@ -10518,11 +10515,6 @@ Facts: interval of dim (121,0):
      v97 in [-oo,+oo]
      v98 in [-oo,+oo]
      v99 in [-oo,+oo]
-
-BasicBlock: 
-return:                                           ; No predecessors!
-  ret i32 0
-Facts: interval of dim (121,0): bottom
 
 ======================
 [WARNING] Value not dumped to metadata: @nowayout = global i32 0, align 4

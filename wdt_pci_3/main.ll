@@ -35,85 +35,84 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: nounwind uwtable
 define i8* @closer1(i8* %unused) #0 {
-entry:
   store i8 86, i8* @wdtpci_write_buf, align 1
   store i32 42, i32* @expect_close, align 4
   store i32 1, i32* @count, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 
-if.end6:                                          ; preds = %if.end5, %entry
-  %3 = load i32, i32* @expect_close, align 4
-  %cmp7 = icmp ne i32 %3, 42
-  br i1 %cmp7, label %if.then9, label %if.else
+; <label>:13                                      ; preds = %12, %0
+  %14 = load i32, i32* @expect_close, align 4
+  %15 = icmp ne i32 %14, 42
+  br i1 %15, label %16, label %17
 
-if.then9:                                         ; preds = %if.end6
+; <label>:16                                      ; preds = %13
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 969, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer1, i32 0, i32 0)) #4
   unreachable
 
-if.else:                                          ; preds = %if.end6
-  br label %do.body
+; <label>:17                                      ; preds = %13
+  br label %18
 
-do.body:                                          ; preds = %if.else
-  br label %do.body10
+; <label>:18                                      ; preds = %17
+  br label %19
 
-do.body10:                                        ; preds = %do.body
-  br label %while.cond
+; <label>:19                                      ; preds = %18
+  br label %20
 
-while.cond:                                       ; preds = %while.body, %do.body10
-  %4 = load i8, i8* @wdtpci_lock, align 1
-  %tobool11 = trunc i8 %4 to i1
-  br i1 %tobool11, label %while.body, label %while.end
+; <label>:20                                      ; preds = %23, %19
+  %21 = load i8, i8* @wdtpci_lock, align 1
+  %22 = trunc i8 %21 to i1
+  br i1 %22, label %23, label %24
 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:23                                      ; preds = %20
+  br label %20
 
-while.end:                                        ; preds = %while.cond
-  br label %do.end
+; <label>:24                                      ; preds = %20
+  br label %25
 
-do.end:                                           ; preds = %while.end
-  %5 = load i8, i8* @wdt_dc_port, align 1
-  br label %do.body12
+; <label>:25                                      ; preds = %24
+  %26 = load i8, i8* @wdt_dc_port, align 1
+  br label %27
 
-do.body12:                                        ; preds = %do.end
-  br label %do.end13
+; <label>:27                                      ; preds = %25
+  br label %28
 
-do.end13:                                         ; preds = %do.body12
-  br label %do.body14
+; <label>:28                                      ; preds = %27
+  br label %29
 
-do.body14:                                        ; preds = %do.end13
+; <label>:29                                      ; preds = %28
   store i8 0, i8* @wdtpci_lock, align 1
-  br label %do.end15
+  br label %30
 
-do.end15:                                         ; preds = %do.body14
-  br label %do.end16
+; <label>:30                                      ; preds = %29
+  br label %31
 
-do.end16:                                         ; preds = %do.end15
-  br label %if.end17
+; <label>:31                                      ; preds = %30
+  br label %32
 
-if.end17:                                         ; preds = %do.end16
+; <label>:32                                      ; preds = %31
   store i32 0, i32* @expect_close, align 4
   ret i8* null
 }
@@ -123,711 +122,677 @@ declare void @__assert_fail(i8*, i8*, i32, i8*) #1
 
 ; Function Attrs: nounwind uwtable
 define i8* @closer2(i8* %unused) #0 {
-entry:
   store i8 86, i8* @wdtpci_write_buf, align 1
   store i32 42, i32* @expect_close, align 4
   store i32 1, i32* @count, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 
-if.end6:                                          ; preds = %if.end5, %entry
-  %3 = load i32, i32* @expect_close, align 4
-  %cmp7 = icmp ne i32 %3, 42
-  br i1 %cmp7, label %if.then9, label %if.else
+; <label>:13                                      ; preds = %12, %0
+  %14 = load i32, i32* @expect_close, align 4
+  %15 = icmp ne i32 %14, 42
+  br i1 %15, label %16, label %17
 
-if.then9:                                         ; preds = %if.end6
+; <label>:16                                      ; preds = %13
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 1002, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer2, i32 0, i32 0)) #4
   unreachable
 
-if.else:                                          ; preds = %if.end6
-  br label %do.body
+; <label>:17                                      ; preds = %13
+  br label %18
 
-do.body:                                          ; preds = %if.else
-  br label %do.body10
+; <label>:18                                      ; preds = %17
+  br label %19
 
-do.body10:                                        ; preds = %do.body
-  br label %while.cond
+; <label>:19                                      ; preds = %18
+  br label %20
 
-while.cond:                                       ; preds = %while.body, %do.body10
-  %4 = load i8, i8* @wdtpci_lock, align 1
-  %tobool11 = trunc i8 %4 to i1
-  br i1 %tobool11, label %while.body, label %while.end
+; <label>:20                                      ; preds = %23, %19
+  %21 = load i8, i8* @wdtpci_lock, align 1
+  %22 = trunc i8 %21 to i1
+  br i1 %22, label %23, label %24
 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:23                                      ; preds = %20
+  br label %20
 
-while.end:                                        ; preds = %while.cond
-  br label %do.end
+; <label>:24                                      ; preds = %20
+  br label %25
 
-do.end:                                           ; preds = %while.end
-  %5 = load i8, i8* @wdt_dc_port, align 1
-  br label %do.body12
+; <label>:25                                      ; preds = %24
+  %26 = load i8, i8* @wdt_dc_port, align 1
+  br label %27
 
-do.body12:                                        ; preds = %do.end
-  br label %do.end13
+; <label>:27                                      ; preds = %25
+  br label %28
 
-do.end13:                                         ; preds = %do.body12
-  br label %do.body14
+; <label>:28                                      ; preds = %27
+  br label %29
 
-do.body14:                                        ; preds = %do.end13
+; <label>:29                                      ; preds = %28
   store i8 0, i8* @wdtpci_lock, align 1
-  br label %do.end15
+  br label %30
 
-do.end15:                                         ; preds = %do.body14
-  br label %do.end16
+; <label>:30                                      ; preds = %29
+  br label %31
 
-do.end16:                                         ; preds = %do.end15
-  br label %if.end17
+; <label>:31                                      ; preds = %30
+  br label %32
 
-if.end17:                                         ; preds = %do.end16
+; <label>:32                                      ; preds = %31
   store i32 0, i32* @expect_close, align 4
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @closer3(i8* %unused) #0 {
-entry:
   store i8 86, i8* @wdtpci_write_buf, align 1
   store i32 42, i32* @expect_close, align 4
   store i32 1, i32* @count, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 
-if.end6:                                          ; preds = %if.end5, %entry
-  %3 = load i32, i32* @expect_close, align 4
-  %cmp7 = icmp ne i32 %3, 42
-  br i1 %cmp7, label %if.then9, label %if.else
+; <label>:13                                      ; preds = %12, %0
+  %14 = load i32, i32* @expect_close, align 4
+  %15 = icmp ne i32 %14, 42
+  br i1 %15, label %16, label %17
 
-if.then9:                                         ; preds = %if.end6
+; <label>:16                                      ; preds = %13
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 1036, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer3, i32 0, i32 0)) #4
   unreachable
 
-if.else:                                          ; preds = %if.end6
-  br label %do.body
+; <label>:17                                      ; preds = %13
+  br label %18
 
-do.body:                                          ; preds = %if.else
-  br label %do.body10
+; <label>:18                                      ; preds = %17
+  br label %19
 
-do.body10:                                        ; preds = %do.body
-  br label %while.cond
+; <label>:19                                      ; preds = %18
+  br label %20
 
-while.cond:                                       ; preds = %while.body, %do.body10
-  %4 = load i8, i8* @wdtpci_lock, align 1
-  %tobool11 = trunc i8 %4 to i1
-  br i1 %tobool11, label %while.body, label %while.end
+; <label>:20                                      ; preds = %23, %19
+  %21 = load i8, i8* @wdtpci_lock, align 1
+  %22 = trunc i8 %21 to i1
+  br i1 %22, label %23, label %24
 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:23                                      ; preds = %20
+  br label %20
 
-while.end:                                        ; preds = %while.cond
-  br label %do.end
+; <label>:24                                      ; preds = %20
+  br label %25
 
-do.end:                                           ; preds = %while.end
-  %5 = load i8, i8* @wdt_dc_port, align 1
-  br label %do.body12
+; <label>:25                                      ; preds = %24
+  %26 = load i8, i8* @wdt_dc_port, align 1
+  br label %27
 
-do.body12:                                        ; preds = %do.end
-  br label %do.end13
+; <label>:27                                      ; preds = %25
+  br label %28
 
-do.end13:                                         ; preds = %do.body12
-  br label %do.body14
+; <label>:28                                      ; preds = %27
+  br label %29
 
-do.body14:                                        ; preds = %do.end13
+; <label>:29                                      ; preds = %28
   store i8 0, i8* @wdtpci_lock, align 1
-  br label %do.end15
+  br label %30
 
-do.end15:                                         ; preds = %do.body14
-  br label %do.end16
+; <label>:30                                      ; preds = %29
+  br label %31
 
-do.end16:                                         ; preds = %do.end15
-  br label %if.end17
+; <label>:31                                      ; preds = %30
+  br label %32
 
-if.end17:                                         ; preds = %do.end16
+; <label>:32                                      ; preds = %31
   store i32 0, i32* @expect_close, align 4
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @closer4(i8* %unused) #0 {
-entry:
   store i8 86, i8* @wdtpci_write_buf, align 1
   store i32 42, i32* @expect_close, align 4
   store i32 1, i32* @count, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 
-if.end6:                                          ; preds = %if.end5, %entry
-  %3 = load i32, i32* @expect_close, align 4
-  %cmp7 = icmp ne i32 %3, 42
-  br i1 %cmp7, label %if.then9, label %if.else
+; <label>:13                                      ; preds = %12, %0
+  %14 = load i32, i32* @expect_close, align 4
+  %15 = icmp ne i32 %14, 42
+  br i1 %15, label %16, label %17
 
-if.then9:                                         ; preds = %if.end6
+; <label>:16                                      ; preds = %13
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 1069, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__PRETTY_FUNCTION__.closer4, i32 0, i32 0)) #4
   unreachable
 
-if.else:                                          ; preds = %if.end6
-  br label %do.body
+; <label>:17                                      ; preds = %13
+  br label %18
 
-do.body:                                          ; preds = %if.else
-  br label %do.body10
+; <label>:18                                      ; preds = %17
+  br label %19
 
-do.body10:                                        ; preds = %do.body
-  br label %while.cond
+; <label>:19                                      ; preds = %18
+  br label %20
 
-while.cond:                                       ; preds = %while.body, %do.body10
-  %4 = load i8, i8* @wdtpci_lock, align 1
-  %tobool11 = trunc i8 %4 to i1
-  br i1 %tobool11, label %while.body, label %while.end
+; <label>:20                                      ; preds = %23, %19
+  %21 = load i8, i8* @wdtpci_lock, align 1
+  %22 = trunc i8 %21 to i1
+  br i1 %22, label %23, label %24
 
-while.body:                                       ; preds = %while.cond
-  br label %while.cond
+; <label>:23                                      ; preds = %20
+  br label %20
 
-while.end:                                        ; preds = %while.cond
-  br label %do.end
+; <label>:24                                      ; preds = %20
+  br label %25
 
-do.end:                                           ; preds = %while.end
-  %5 = load i8, i8* @wdt_dc_port, align 1
-  br label %do.body12
+; <label>:25                                      ; preds = %24
+  %26 = load i8, i8* @wdt_dc_port, align 1
+  br label %27
 
-do.body12:                                        ; preds = %do.end
-  br label %do.end13
+; <label>:27                                      ; preds = %25
+  br label %28
 
-do.end13:                                         ; preds = %do.body12
-  br label %do.body14
+; <label>:28                                      ; preds = %27
+  br label %29
 
-do.body14:                                        ; preds = %do.end13
+; <label>:29                                      ; preds = %28
   store i8 0, i8* @wdtpci_lock, align 1
-  br label %do.end15
+  br label %30
 
-do.end15:                                         ; preds = %do.body14
-  br label %do.end16
+; <label>:30                                      ; preds = %29
+  br label %31
 
-do.end16:                                         ; preds = %do.end15
-  br label %if.end17
+; <label>:31                                      ; preds = %30
+  br label %32
 
-if.end17:                                         ; preds = %do.end16
+; <label>:32                                      ; preds = %31
   store i32 0, i32* @expect_close, align 4
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer1(i8* %unused) #0 {
-entry:
   store i32 0, i32* @count, align 4
   store i32 0, i32* @expect_close, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 
-if.end6:                                          ; preds = %if.end5, %entry
+; <label>:13                                      ; preds = %12, %0
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer2(i8* %unused) #0 {
-entry:
   store i32 0, i32* @count, align 4
   store i32 0, i32* @expect_close, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 
-if.end6:                                          ; preds = %if.end5, %entry
+; <label>:13                                      ; preds = %12, %0
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer3(i8* %unused) #0 {
-entry:
   store i32 0, i32* @count, align 4
   store i32 0, i32* @expect_close, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 
-if.end6:                                          ; preds = %if.end5, %entry
+; <label>:13                                      ; preds = %12, %0
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer4(i8* %unused) #0 {
-entry:
   store i32 0, i32* @count, align 4
   store i32 0, i32* @expect_close, align 4
-  %0 = load i32, i32* @count, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end6
+  %1 = load i32, i32* @count, align 4
+  %2 = icmp ne i32 %1, 0
+  br i1 %2, label %3, label %13
 
-if.then:                                          ; preds = %entry
-  %1 = load i32, i32* @nowayout, align 4
-  %tobool1 = icmp ne i32 %1, 0
-  br i1 %tobool1, label %if.end5, label %if.then2
+; <label>:3                                       ; preds = %0
+  %4 = load i32, i32* @nowayout, align 4
+  %5 = icmp ne i32 %4, 0
+  br i1 %5, label %12, label %6
 
-if.then2:                                         ; preds = %if.then
-  %2 = load i8, i8* @wdtpci_write_buf, align 1
-  %conv = sext i8 %2 to i32
-  %cmp = icmp ne i32 %conv, 86
-  br i1 %cmp, label %if.then4, label %if.end
+; <label>:6                                       ; preds = %3
+  %7 = load i8, i8* @wdtpci_write_buf, align 1
+  %8 = sext i8 %7 to i32
+  %9 = icmp ne i32 %8, 86
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %6
   store i32 0, i32* @expect_close, align 4
-  br label %if.end
+  br label %11
 
-if.end:                                           ; preds = %if.then4, %if.then2
-  br label %if.end5
+; <label>:11                                      ; preds = %10, %6
+  br label %12
 
-if.end5:                                          ; preds = %if.end, %if.then
-  br label %if.end6
+; <label>:12                                      ; preds = %11, %3
+  br label %13
 
-if.end6:                                          ; preds = %if.end5, %entry
+; <label>:13                                      ; preds = %12, %0
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer5(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer6(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer7(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer8(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer9(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer10(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer11(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer12(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer13(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer14(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer15(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer16(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer17(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer18(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer19(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer20(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer21(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer22(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer23(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer24(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer25(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer26(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer27(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer28(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @writer29(i8* %unused) #0 {
-entry:
-  br label %do.body
+  br label %1
 
-do.body:                                          ; preds = %entry
-  br label %do.end
+; <label>:1                                       ; preds = %0
+  br label %2
 
-do.end:                                           ; preds = %do.body
+; <label>:2                                       ; preds = %1
   ret i8* null
 }
 
 ; Function Attrs: nounwind uwtable
 define i32 @main(i32 %argc, i8** %argv) #0 {
-entry:
   %t1 = alloca i64, align 8
-  %call = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer1, i8* null) #5
-  %call1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer2, i8* null) #5
-  %call2 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer3, i8* null) #5
-  %call3 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer4, i8* null) #5
-  %call4 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer1, i8* null) #5
-  %call5 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer2, i8* null) #5
-  %call6 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer3, i8* null) #5
-  %call7 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer4, i8* null) #5
+  %1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer1, i8* null) #5
+  %2 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer2, i8* null) #5
+  %3 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer3, i8* null) #5
+  %4 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @writer4, i8* null) #5
+  %5 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer1, i8* null) #5
+  %6 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer2, i8* null) #5
+  %7 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer3, i8* null) #5
+  %8 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @closer4, i8* null) #5
   call void @pthread_exit(i8* null) #6
   unreachable
-
-return:                                           ; No predecessors!
+                                                  ; No predecessors!
   ret i32 0
 }
 

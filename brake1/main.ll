@@ -60,114 +60,113 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: nounwind uwtable
 define i8* @task_compute(i8* %unused) #0 {
-entry:
-  %0 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
-  store i32 %0, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  %1 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
-  store i32 %1, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %2 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
-  store i32 %2, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
-  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
-  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
-  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
-  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
+  %1 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
+  store i32 %1, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  %2 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
+  store i32 %2, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
+  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
+  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
+  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
+  %5 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
+  store i32 %5, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
   store i32 0, i32* @test, align 4
-  %5 = load i32, i32* @brake_acc_nodiv_ctrl_P_Distribution_Gain1, align 4
-  %6 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT14, align 4
-  %add = add nsw i32 %5, %6
-  store i32 %add, i32* @Distribution_idx, align 4
-  %7 = load i32, i32* @brake_acc_nodiv_ctrl_P_Distribution_Gain2, align 4
-  %8 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT14, align 4
-  %add1 = add nsw i32 %7, %8
-  store i32 %add1, i32* @Distribution_idx_0, align 4
-  %9 = load i32, i32* @brake_acc_nodiv_ctrl_P_Distribution_Gain3, align 4
+  %6 = load i32, i32* @brake_acc_nodiv_ctrl_P_Distribution_Gain1, align 4
+  %7 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT14, align 4
+  %8 = add nsw i32 %6, %7
+  store i32 %8, i32* @Distribution_idx, align 4
+  %9 = load i32, i32* @brake_acc_nodiv_ctrl_P_Distribution_Gain2, align 4
   %10 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT14, align 4
-  %add2 = add nsw i32 %9, %10
-  store i32 %add2, i32* @Distribution_idx_1, align 4
-  %11 = load i32, i32* @RT9, align 4
-  %12 = load i32, i32* @RT10, align 4
-  %add3 = add nsw i32 %11, %12
-  store i32 %add3, i32* @vkmh, align 4
-  %13 = load i32, i32* @vkmh, align 4
-  %14 = load i32, i32* @RT11, align 4
-  %add4 = add nsw i32 %13, %14
-  store i32 %add4, i32* @vkmh, align 4
-  %15 = load i32, i32* @vkmh, align 4
-  %16 = load i32, i32* @RT12, align 4
-  %add5 = add nsw i32 %15, %16
-  store i32 %add5, i32* @vkmh, align 4
-  %17 = load i32, i32* @vkmh, align 4
-  %18 = load i32, i32* @brake_acc_nodiv_ctrl_P_average_rpm_Gain, align 4
-  %add6 = add nsw i32 %17, %18
-  store i32 %add6, i32* @vkmh, align 4
-  %19 = load i32, i32* @vkmh, align 4
-  %20 = load i32, i32* @brake_acc_nodiv_ctrl_P_wgrads_Gain, align 4
-  %add7 = add nsw i32 %19, %20
-  store i32 %add7, i32* @vkmh, align 4
+  %11 = add nsw i32 %9, %10
+  store i32 %11, i32* @Distribution_idx_0, align 4
+  %12 = load i32, i32* @brake_acc_nodiv_ctrl_P_Distribution_Gain3, align 4
+  %13 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT14, align 4
+  %14 = add nsw i32 %12, %13
+  store i32 %14, i32* @Distribution_idx_1, align 4
+  %15 = load i32, i32* @RT9, align 4
+  %16 = load i32, i32* @RT10, align 4
+  %17 = add nsw i32 %15, %16
+  store i32 %17, i32* @vkmh, align 4
+  %18 = load i32, i32* @vkmh, align 4
+  %19 = load i32, i32* @RT11, align 4
+  %20 = add nsw i32 %18, %19
+  store i32 %20, i32* @vkmh, align 4
   %21 = load i32, i32* @vkmh, align 4
-  %22 = load i32, i32* @brake_acc_nodiv_ctrl_P_vkmh_Gain, align 4
-  %add8 = add nsw i32 %21, %22
-  store i32 %add8, i32* @vkmh, align 4
-  %23 = load i32, i32* @test, align 4
-  %cmp = icmp ne i32 %23, 0
-  br i1 %cmp, label %if.then, label %if.end
+  %22 = load i32, i32* @RT12, align 4
+  %23 = add nsw i32 %21, %22
+  store i32 %23, i32* @vkmh, align 4
+  %24 = load i32, i32* @vkmh, align 4
+  %25 = load i32, i32* @brake_acc_nodiv_ctrl_P_average_rpm_Gain, align 4
+  %26 = add nsw i32 %24, %25
+  store i32 %26, i32* @vkmh, align 4
+  %27 = load i32, i32* @vkmh, align 4
+  %28 = load i32, i32* @brake_acc_nodiv_ctrl_P_wgrads_Gain, align 4
+  %29 = add nsw i32 %27, %28
+  store i32 %29, i32* @vkmh, align 4
+  %30 = load i32, i32* @vkmh, align 4
+  %31 = load i32, i32* @brake_acc_nodiv_ctrl_P_vkmh_Gain, align 4
+  %32 = add nsw i32 %30, %31
+  store i32 %32, i32* @vkmh, align 4
+  %33 = load i32, i32* @test, align 4
+  %34 = icmp ne i32 %33, 0
+  br i1 %34, label %35, label %36
 
-if.then:                                          ; preds = %entry
+; <label>:35                                      ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.5, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.6, i32 0, i32 0), i32 321, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @__PRETTY_FUNCTION__.task_compute, i32 0, i32 0)) #3
   unreachable
 
-if.end:                                           ; preds = %entry
-  %24 = load i32, i32* @test, align 4
-  %cmp9 = icmp ne i32 %24, 1
-  br i1 %cmp9, label %if.then10, label %if.end11
+; <label>:36                                      ; preds = %0
+  %37 = load i32, i32* @test, align 4
+  %38 = icmp ne i32 %37, 1
+  br i1 %38, label %39, label %40
 
-if.then10:                                        ; preds = %if.end
+; <label>:39                                      ; preds = %36
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.5, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.6, i32 0, i32 0), i32 325, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @__PRETTY_FUNCTION__.task_compute, i32 0, i32 0)) #3
   unreachable
 
-if.end11:                                         ; preds = %if.end
-  %25 = load i32, i32* @test, align 4
-  %cmp12 = icmp ne i32 %25, 2
-  br i1 %cmp12, label %if.then13, label %if.end14
+; <label>:40                                      ; preds = %36
+  %41 = load i32, i32* @test, align 4
+  %42 = icmp ne i32 %41, 2
+  br i1 %42, label %43, label %44
 
-if.then13:                                        ; preds = %if.end11
+; <label>:43                                      ; preds = %40
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.5, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.6, i32 0, i32 0), i32 329, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @__PRETTY_FUNCTION__.task_compute, i32 0, i32 0)) #3
   unreachable
 
-if.end14:                                         ; preds = %if.end11
-  %26 = load i32, i32* @test, align 4
-  %cmp15 = icmp ne i32 %26, 3
-  br i1 %cmp15, label %if.then16, label %if.end17
+; <label>:44                                      ; preds = %40
+  %45 = load i32, i32* @test, align 4
+  %46 = icmp ne i32 %45, 3
+  br i1 %46, label %47, label %48
 
-if.then16:                                        ; preds = %if.end14
+; <label>:47                                      ; preds = %44
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.5, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.6, i32 0, i32 0), i32 333, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @__PRETTY_FUNCTION__.task_compute, i32 0, i32 0)) #3
   unreachable
 
-if.end17:                                         ; preds = %if.end14
-  %27 = load i32, i32* @test, align 4
-  %cmp18 = icmp sle i32 %27, 0
-  br i1 %cmp18, label %if.then19, label %if.end20
+; <label>:48                                      ; preds = %44
+  %49 = load i32, i32* @test, align 4
+  %50 = icmp sle i32 %49, 0
+  br i1 %50, label %51, label %52
 
-if.then19:                                        ; preds = %if.end17
+; <label>:51                                      ; preds = %48
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.5, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.6, i32 0, i32 0), i32 337, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @__PRETTY_FUNCTION__.task_compute, i32 0, i32 0)) #3
   unreachable
 
-if.end20:                                         ; preds = %if.end17
-  %28 = load i32, i32* @test, align 4
-  %inc = add nsw i32 %28, 1
-  store i32 %inc, i32* @test, align 4
-  %29 = load i32, i32* @brake_acc_nodiv_ctrl_P_Distribution_Gain0, align 4
-  %30 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT14, align 4
-  %add21 = add nsw i32 %29, %30
-  store i32 %add21, i32* @RT_Buffer0, align 4
-  %31 = load i32, i32* @vkmh, align 4
-  store i32 %31, i32* @RT4_Buffer0, align 4
-  %32 = load i32, i32* @Distribution_idx, align 4
-  store i32 %32, i32* @RT1_Buffer0, align 4
-  %33 = load i32, i32* @Distribution_idx_0, align 4
-  store i32 %33, i32* @RT2_Buffer0, align 4
-  %34 = load i32, i32* @Distribution_idx_1, align 4
-  store i32 %34, i32* @RT3_Buffer0, align 4
+; <label>:52                                      ; preds = %48
+  %53 = load i32, i32* @test, align 4
+  %54 = add nsw i32 %53, 1
+  store i32 %54, i32* @test, align 4
+  %55 = load i32, i32* @brake_acc_nodiv_ctrl_P_Distribution_Gain0, align 4
+  %56 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT14, align 4
+  %57 = add nsw i32 %55, %56
+  store i32 %57, i32* @RT_Buffer0, align 4
+  %58 = load i32, i32* @vkmh, align 4
+  store i32 %58, i32* @RT4_Buffer0, align 4
+  %59 = load i32, i32* @Distribution_idx, align 4
+  store i32 %59, i32* @RT1_Buffer0, align 4
+  %60 = load i32, i32* @Distribution_idx_0, align 4
+  store i32 %60, i32* @RT2_Buffer0, align 4
+  %61 = load i32, i32* @Distribution_idx_1, align 4
+  store i32 %61, i32* @RT3_Buffer0, align 4
   ret i8* undef
 }
 
@@ -176,378 +175,373 @@ declare void @__assert_fail(i8*, i8*, i32, i8*) #1
 
 ; Function Attrs: nounwind uwtable
 define i8* @task_RR_Wheel(i8* %unused) #0 {
-entry:
   store i32 1, i32* @test, align 4
-  %0 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
-  store i32 %0, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  %1 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
-  store i32 %1, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %2 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
-  store i32 %2, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
-  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
-  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
-  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
-  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
-  %5 = load i32, i32* @RT_Buffer0, align 4
-  store i32 %5, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  %6 = load i32, i32* @RT4_Buffer0, align 4
-  store i32 %6, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %7 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %add = add nsw i32 10, %7
-  %add1 = add nsw i32 %add, 10
-  %add2 = add nsw i32 %add1, 10
-  %cmp = icmp sge i32 %add2, 100
-  br i1 %cmp, label %if.then, label %if.else
-
-if.then:                                          ; preds = %entry
-  br label %if.end5
-
-if.else:                                          ; preds = %entry
-  %cmp3 = icmp sle i32 %add2, 5
-  br i1 %cmp3, label %if.then4, label %if.end
-
-if.then4:                                         ; preds = %if.else
-  br label %if.end
-
-if.end:                                           ; preds = %if.then4, %if.else
-  br label %if.end5
-
-if.end5:                                          ; preds = %if.end, %if.then
-  %add6 = add nsw i32 10, %add
-  %cmp7 = icmp sgt i32 10, %add6
-  br i1 %cmp7, label %if.then8, label %if.else9
-
-if.then8:                                         ; preds = %if.end5
-  br label %if.end10
-
-if.else9:                                         ; preds = %if.end5
-  br label %if.end10
-
-if.end10:                                         ; preds = %if.else9, %if.then8
-  %rtb_RelationalOperator.0 = phi i8 [ 1, %if.then8 ], [ 0, %if.else9 ]
+  %1 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
+  store i32 %1, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  %2 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
+  store i32 %2, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
+  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
+  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
+  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
+  %5 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
+  store i32 %5, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
+  %6 = load i32, i32* @RT_Buffer0, align 4
+  store i32 %6, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  %7 = load i32, i32* @RT4_Buffer0, align 4
+  store i32 %7, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
   %8 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %cmp11 = icmp sge i32 %8, 100
-  br i1 %cmp11, label %if.then12, label %if.else16
+  %9 = add nsw i32 10, %8
+  %10 = add nsw i32 %9, 10
+  %11 = add nsw i32 %10, 10
+  %12 = icmp sge i32 %11, 100
+  br i1 %12, label %13, label %14
 
-if.then12:                                        ; preds = %if.end10
-  %tobool = trunc i8 %rtb_RelationalOperator.0 to i1
-  br i1 %tobool, label %if.then13, label %if.else14
+; <label>:13                                      ; preds = %0
+  br label %18
 
-if.then13:                                        ; preds = %if.then12
+; <label>:14                                      ; preds = %0
+  %15 = icmp sle i32 %11, 5
+  br i1 %15, label %16, label %17
+
+; <label>:16                                      ; preds = %14
+  br label %17
+
+; <label>:17                                      ; preds = %16, %14
+  br label %18
+
+; <label>:18                                      ; preds = %17, %13
+  %19 = add nsw i32 10, %9
+  %20 = icmp sgt i32 10, %19
+  br i1 %20, label %21, label %22
+
+; <label>:21                                      ; preds = %18
+  br label %23
+
+; <label>:22                                      ; preds = %18
+  br label %23
+
+; <label>:23                                      ; preds = %22, %21
+  %rtb_RelationalOperator.0 = phi i8 [ 1, %21 ], [ 0, %22 ]
+  %24 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %25 = icmp sge i32 %24, 100
+  br i1 %25, label %26, label %32
+
+; <label>:26                                      ; preds = %23
+  %27 = trunc i8 %rtb_RelationalOperator.0 to i1
+  br i1 %27, label %28, label %29
+
+; <label>:28                                      ; preds = %26
   store i32 8, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RR_Wheel_Threshold_10kmh, align 4
-  br label %if.end15
+  br label %31
 
-if.else14:                                        ; preds = %if.then12
-  %9 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  store i32 %9, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RR_Wheel_Threshold_10kmh, align 4
-  br label %if.end15
+; <label>:29                                      ; preds = %26
+  %30 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  store i32 %30, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RR_Wheel_Threshold_10kmh, align 4
+  br label %31
 
-if.end15:                                         ; preds = %if.else14, %if.then13
-  br label %if.end17
+; <label>:31                                      ; preds = %29, %28
+  br label %34
 
-if.else16:                                        ; preds = %if.end10
-  %10 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  store i32 %10, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RR_Wheel_Threshold_10kmh, align 4
-  br label %if.end17
+; <label>:32                                      ; preds = %23
+  %33 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  store i32 %33, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RR_Wheel_Threshold_10kmh, align 4
+  br label %34
 
-if.end17:                                         ; preds = %if.else16, %if.end15
-  %11 = load i32, i32* @RT1_Buffer0, align 4
-  store i32 %11, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
+; <label>:34                                      ; preds = %32, %31
+  %35 = load i32, i32* @RT1_Buffer0, align 4
+  store i32 %35, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
   store i32 10, i32* @RT9, align 4
   ret i8* undef
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @task_FL_Wheel(i8* %unused) #0 {
-entry:
-  %0 = load i32, i32* @test, align 4
-  %inc = add nsw i32 %0, 1
-  store i32 %inc, i32* @test, align 4
-  %1 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
-  store i32 %1, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  %2 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
-  store i32 %2, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
-  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
-  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
-  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
-  %5 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
-  store i32 %5, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
-  %6 = load i32, i32* @RT_Buffer0, align 4
-  store i32 %6, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  %7 = load i32, i32* @RT4_Buffer0, align 4
-  store i32 %7, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %8 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %add = add nsw i32 10, %8
-  %add1 = add nsw i32 %add, 10
-  %add2 = add nsw i32 %add1, 10
-  %cmp = icmp sge i32 %add2, 100
-  br i1 %cmp, label %if.then, label %if.else
+  %1 = load i32, i32* @test, align 4
+  %2 = add nsw i32 %1, 1
+  store i32 %2, i32* @test, align 4
+  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
+  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
+  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %5 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
+  store i32 %5, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
+  %6 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
+  store i32 %6, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
+  %7 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
+  store i32 %7, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
+  %8 = load i32, i32* @RT_Buffer0, align 4
+  store i32 %8, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  %9 = load i32, i32* @RT4_Buffer0, align 4
+  store i32 %9, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %10 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %11 = add nsw i32 10, %10
+  %12 = add nsw i32 %11, 10
+  %13 = add nsw i32 %12, 10
+  %14 = icmp sge i32 %13, 100
+  br i1 %14, label %15, label %16
 
-if.then:                                          ; preds = %entry
-  br label %if.end5
+; <label>:15                                      ; preds = %0
+  br label %20
 
-if.else:                                          ; preds = %entry
-  %cmp3 = icmp sle i32 %add2, 5
-  br i1 %cmp3, label %if.then4, label %if.end
+; <label>:16                                      ; preds = %0
+  %17 = icmp sle i32 %13, 5
+  br i1 %17, label %18, label %19
 
-if.then4:                                         ; preds = %if.else
-  br label %if.end
+; <label>:18                                      ; preds = %16
+  br label %19
 
-if.end:                                           ; preds = %if.then4, %if.else
-  br label %if.end5
+; <label>:19                                      ; preds = %18, %16
+  br label %20
 
-if.end5:                                          ; preds = %if.end, %if.then
-  %add6 = add nsw i32 10, %add
-  %cmp7 = icmp sgt i32 10, %add6
-  br i1 %cmp7, label %if.then8, label %if.else9
+; <label>:20                                      ; preds = %19, %15
+  %21 = add nsw i32 10, %11
+  %22 = icmp sgt i32 10, %21
+  br i1 %22, label %23, label %24
 
-if.then8:                                         ; preds = %if.end5
-  br label %if.end10
+; <label>:23                                      ; preds = %20
+  br label %25
 
-if.else9:                                         ; preds = %if.end5
-  br label %if.end10
+; <label>:24                                      ; preds = %20
+  br label %25
 
-if.end10:                                         ; preds = %if.else9, %if.then8
-  %rtb_RelationalOperator.0 = phi i8 [ 1, %if.then8 ], [ 0, %if.else9 ]
-  %9 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %cmp11 = icmp sge i32 %9, 100
-  br i1 %cmp11, label %if.then12, label %if.else16
+; <label>:25                                      ; preds = %24, %23
+  %rtb_RelationalOperator.0 = phi i8 [ 1, %23 ], [ 0, %24 ]
+  %26 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %27 = icmp sge i32 %26, 100
+  br i1 %27, label %28, label %34
 
-if.then12:                                        ; preds = %if.end10
-  %tobool = trunc i8 %rtb_RelationalOperator.0 to i1
-  br i1 %tobool, label %if.then13, label %if.else14
+; <label>:28                                      ; preds = %25
+  %29 = trunc i8 %rtb_RelationalOperator.0 to i1
+  br i1 %29, label %30, label %31
 
-if.then13:                                        ; preds = %if.then12
+; <label>:30                                      ; preds = %28
   store i32 8, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FL_Wheel_Threshold_10kmh, align 4
-  br label %if.end15
+  br label %33
 
-if.else14:                                        ; preds = %if.then12
-  %10 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
-  store i32 %10, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FL_Wheel_Threshold_10kmh, align 4
-  br label %if.end15
+; <label>:31                                      ; preds = %28
+  %32 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
+  store i32 %32, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FL_Wheel_Threshold_10kmh, align 4
+  br label %33
 
-if.end15:                                         ; preds = %if.else14, %if.then13
-  br label %if.end17
+; <label>:33                                      ; preds = %31, %30
+  br label %36
 
-if.else16:                                        ; preds = %if.end10
-  %11 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
-  store i32 %11, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FL_Wheel_Threshold_10kmh, align 4
-  br label %if.end17
+; <label>:34                                      ; preds = %25
+  %35 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
+  store i32 %35, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FL_Wheel_Threshold_10kmh, align 4
+  br label %36
 
-if.end17:                                         ; preds = %if.else16, %if.end15
-  %tobool18 = trunc i8 %rtb_RelationalOperator.0 to i1
-  br i1 %tobool18, label %if.then19, label %if.else20
+; <label>:36                                      ; preds = %34, %33
+  %37 = trunc i8 %rtb_RelationalOperator.0 to i1
+  br i1 %37, label %38, label %39
 
-if.then19:                                        ; preds = %if.end17
-  br label %if.end21
+; <label>:38                                      ; preds = %36
+  br label %40
 
-if.else20:                                        ; preds = %if.end17
-  br label %if.end21
+; <label>:39                                      ; preds = %36
+  br label %40
 
-if.end21:                                         ; preds = %if.else20, %if.then19
-  %In_BrakePedal.0 = phi i32 [ 15, %if.then19 ], [ 65, %if.else20 ]
-  %cmp22 = icmp sge i32 %In_BrakePedal.0, 50
-  br i1 %cmp22, label %if.then23, label %if.end24
+; <label>:40                                      ; preds = %39, %38
+  %In_BrakePedal.0 = phi i32 [ 15, %38 ], [ 65, %39 ]
+  %41 = icmp sge i32 %In_BrakePedal.0, 50
+  br i1 %41, label %42, label %43
 
-if.then23:                                        ; preds = %if.end21
-  br label %if.end24
+; <label>:42                                      ; preds = %40
+  br label %43
 
-if.end24:                                         ; preds = %if.then23, %if.end21
-  %cmp25 = icmp sle i32 %In_BrakePedal.0, 20
-  br i1 %cmp25, label %if.then26, label %if.else27
+; <label>:43                                      ; preds = %42, %40
+  %44 = icmp sle i32 %In_BrakePedal.0, 20
+  br i1 %44, label %45, label %46
 
-if.then26:                                        ; preds = %if.end24
-  br label %if.end28
+; <label>:45                                      ; preds = %43
+  br label %47
 
-if.else27:                                        ; preds = %if.end24
-  br label %if.end28
+; <label>:46                                      ; preds = %43
+  br label %47
 
-if.end28:                                         ; preds = %if.else27, %if.then26
-  %tmp.0 = phi i32 [ 20, %if.then26 ], [ 15, %if.else27 ]
-  %12 = load i32, i32* @brake_acc_nodiv_ctrl_P_Gain1_Gain, align 4
-  %add29 = add nsw i32 %12, %tmp.0
-  store i32 %add29, i32* @RT14, align 4
+; <label>:47                                      ; preds = %46, %45
+  %tmp.0 = phi i32 [ 20, %45 ], [ 15, %46 ]
+  %48 = load i32, i32* @brake_acc_nodiv_ctrl_P_Gain1_Gain, align 4
+  %49 = add nsw i32 %48, %tmp.0
+  store i32 %49, i32* @RT14, align 4
   store i32 10, i32* @RT12, align 4
   ret i8* undef
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @task_FR_Wheel(i8* %unused) #0 {
-entry:
-  %0 = load i32, i32* @test, align 4
-  %inc = add nsw i32 %0, 1
-  store i32 %inc, i32* @test, align 4
-  %1 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
-  store i32 %1, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  %2 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
-  store i32 %2, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
-  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
-  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
-  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
-  %5 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
-  store i32 %5, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
-  %6 = load i32, i32* @RT4_Buffer0, align 4
-  store i32 %6, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %7 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %add = add nsw i32 10, %7
-  %add1 = add nsw i32 %add, 10
-  %add2 = add nsw i32 %add1, 10
-  %cmp = icmp sge i32 %add2, 100
-  br i1 %cmp, label %if.then, label %if.else
+  %1 = load i32, i32* @test, align 4
+  %2 = add nsw i32 %1, 1
+  store i32 %2, i32* @test, align 4
+  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
+  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
+  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %5 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
+  store i32 %5, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
+  %6 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
+  store i32 %6, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
+  %7 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
+  store i32 %7, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
+  %8 = load i32, i32* @RT4_Buffer0, align 4
+  store i32 %8, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %9 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %10 = add nsw i32 10, %9
+  %11 = add nsw i32 %10, 10
+  %12 = add nsw i32 %11, 10
+  %13 = icmp sge i32 %12, 100
+  br i1 %13, label %14, label %15
 
-if.then:                                          ; preds = %entry
-  br label %if.end5
+; <label>:14                                      ; preds = %0
+  br label %19
 
-if.else:                                          ; preds = %entry
-  %cmp3 = icmp sle i32 %add2, 5
-  br i1 %cmp3, label %if.then4, label %if.end
+; <label>:15                                      ; preds = %0
+  %16 = icmp sle i32 %12, 5
+  br i1 %16, label %17, label %18
 
-if.then4:                                         ; preds = %if.else
-  br label %if.end
+; <label>:17                                      ; preds = %15
+  br label %18
 
-if.end:                                           ; preds = %if.then4, %if.else
-  br label %if.end5
+; <label>:18                                      ; preds = %17, %15
+  br label %19
 
-if.end5:                                          ; preds = %if.end, %if.then
-  %add6 = add nsw i32 10, %add
-  %cmp7 = icmp sgt i32 10, %add6
-  br i1 %cmp7, label %if.then8, label %if.else9
+; <label>:19                                      ; preds = %18, %14
+  %20 = add nsw i32 10, %10
+  %21 = icmp sgt i32 10, %20
+  br i1 %21, label %22, label %23
 
-if.then8:                                         ; preds = %if.end5
-  br label %if.end10
+; <label>:22                                      ; preds = %19
+  br label %24
 
-if.else9:                                         ; preds = %if.end5
-  br label %if.end10
+; <label>:23                                      ; preds = %19
+  br label %24
 
-if.end10:                                         ; preds = %if.else9, %if.then8
-  %rtb_RelationalOperator.0 = phi i8 [ 1, %if.then8 ], [ 0, %if.else9 ]
-  %8 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %cmp11 = icmp sge i32 %8, 100
-  br i1 %cmp11, label %if.then12, label %if.else16
+; <label>:24                                      ; preds = %23, %22
+  %rtb_RelationalOperator.0 = phi i8 [ 1, %22 ], [ 0, %23 ]
+  %25 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %26 = icmp sge i32 %25, 100
+  br i1 %26, label %27, label %33
 
-if.then12:                                        ; preds = %if.end10
-  %tobool = trunc i8 %rtb_RelationalOperator.0 to i1
-  br i1 %tobool, label %if.then13, label %if.else14
+; <label>:27                                      ; preds = %24
+  %28 = trunc i8 %rtb_RelationalOperator.0 to i1
+  br i1 %28, label %29, label %30
 
-if.then13:                                        ; preds = %if.then12
+; <label>:29                                      ; preds = %27
   store i32 8, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FR_Wheel_Threshold_10kmh, align 4
-  br label %if.end15
+  br label %32
 
-if.else14:                                        ; preds = %if.then12
-  %9 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
-  store i32 %9, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FR_Wheel_Threshold_10kmh, align 4
-  br label %if.end15
+; <label>:30                                      ; preds = %27
+  %31 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
+  store i32 %31, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FR_Wheel_Threshold_10kmh, align 4
+  br label %32
 
-if.end15:                                         ; preds = %if.else14, %if.then13
-  br label %if.end17
+; <label>:32                                      ; preds = %30, %29
+  br label %35
 
-if.else16:                                        ; preds = %if.end10
-  %10 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
-  store i32 %10, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FR_Wheel_Threshold_10kmh, align 4
-  br label %if.end17
+; <label>:33                                      ; preds = %24
+  %34 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
+  store i32 %34, i32* @brake_acc_nodiv_ctrl_B_local_ABS_FR_Wheel_Threshold_10kmh, align 4
+  br label %35
 
-if.end17:                                         ; preds = %if.else16, %if.end15
-  %11 = load i32, i32* @RT3_Buffer0, align 4
-  store i32 %11, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
+; <label>:35                                      ; preds = %33, %32
+  %36 = load i32, i32* @RT3_Buffer0, align 4
+  store i32 %36, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
   store i32 10, i32* @RT11, align 4
   ret i8* undef
 }
 
 ; Function Attrs: nounwind uwtable
 define i8* @task_RL_Wheel(i8* %unused) #0 {
-entry:
-  %0 = load i32, i32* @test, align 4
-  %inc = add nsw i32 %0, 1
-  store i32 %inc, i32* @test, align 4
-  %1 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
-  store i32 %1, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  %2 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
-  store i32 %2, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
-  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
-  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
-  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
-  %5 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
-  store i32 %5, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
-  %6 = load i32, i32* @RT_Buffer0, align 4
-  store i32 %6, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
-  %7 = load i32, i32* @RT4_Buffer0, align 4
-  store i32 %7, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %8 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %add = add nsw i32 10, %8
-  %add1 = add nsw i32 %add, 10
-  %add2 = add nsw i32 %add1, 10
-  %cmp = icmp sge i32 %add2, 100
-  br i1 %cmp, label %if.then, label %if.else
+  %1 = load i32, i32* @test, align 4
+  %2 = add nsw i32 %1, 1
+  store i32 %2, i32* @test, align 4
+  %3 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT_X0, align 4
+  store i32 %3, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  %4 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT4_X0, align 4
+  store i32 %4, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %5 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT1_X0, align 4
+  store i32 %5, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
+  %6 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT2_X0, align 4
+  store i32 %6, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
+  %7 = load i32, i32* @brake_acc_nodiv_ctrl_P_RT3_X0, align 4
+  store i32 %7, i32* @brake_acc_nodiv_ctrl_B_local_RT3, align 4
+  %8 = load i32, i32* @RT_Buffer0, align 4
+  store i32 %8, i32* @brake_acc_nodiv_ctrl_B_local_RT_h, align 4
+  %9 = load i32, i32* @RT4_Buffer0, align 4
+  store i32 %9, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %10 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %11 = add nsw i32 10, %10
+  %12 = add nsw i32 %11, 10
+  %13 = add nsw i32 %12, 10
+  %14 = icmp sge i32 %13, 100
+  br i1 %14, label %15, label %16
 
-if.then:                                          ; preds = %entry
-  br label %if.end5
+; <label>:15                                      ; preds = %0
+  br label %20
 
-if.else:                                          ; preds = %entry
-  %cmp3 = icmp sle i32 %add2, 5
-  br i1 %cmp3, label %if.then4, label %if.end
+; <label>:16                                      ; preds = %0
+  %17 = icmp sle i32 %13, 5
+  br i1 %17, label %18, label %19
 
-if.then4:                                         ; preds = %if.else
-  br label %if.end
+; <label>:18                                      ; preds = %16
+  br label %19
 
-if.end:                                           ; preds = %if.then4, %if.else
-  br label %if.end5
+; <label>:19                                      ; preds = %18, %16
+  br label %20
 
-if.end5:                                          ; preds = %if.end, %if.then
-  %add6 = add nsw i32 10, %add
-  %cmp7 = icmp sgt i32 10, %add6
-  br i1 %cmp7, label %if.then8, label %if.else9
+; <label>:20                                      ; preds = %19, %15
+  %21 = add nsw i32 10, %11
+  %22 = icmp sgt i32 10, %21
+  br i1 %22, label %23, label %24
 
-if.then8:                                         ; preds = %if.end5
-  br label %if.end10
+; <label>:23                                      ; preds = %20
+  br label %25
 
-if.else9:                                         ; preds = %if.end5
-  br label %if.end10
+; <label>:24                                      ; preds = %20
+  br label %25
 
-if.end10:                                         ; preds = %if.else9, %if.then8
-  %rtb_RelationalOperator.0 = phi i8 [ 1, %if.then8 ], [ 0, %if.else9 ]
-  %9 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
-  %cmp11 = icmp sge i32 %9, 100
-  br i1 %cmp11, label %if.then12, label %if.else16
+; <label>:25                                      ; preds = %24, %23
+  %rtb_RelationalOperator.0 = phi i8 [ 1, %23 ], [ 0, %24 ]
+  %26 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT4, align 4
+  %27 = icmp sge i32 %26, 100
+  br i1 %27, label %28, label %34
 
-if.then12:                                        ; preds = %if.end10
-  %tobool = trunc i8 %rtb_RelationalOperator.0 to i1
-  br i1 %tobool, label %if.then13, label %if.else14
+; <label>:28                                      ; preds = %25
+  %29 = trunc i8 %rtb_RelationalOperator.0 to i1
+  br i1 %29, label %30, label %31
 
-if.then13:                                        ; preds = %if.then12
+; <label>:30                                      ; preds = %28
   store i32 8, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RL_Wheel_Threshold_10kmh, align 4
-  br label %if.end15
+  br label %33
 
-if.else14:                                        ; preds = %if.then12
-  %10 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
-  store i32 %10, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RL_Wheel_Threshold_10kmh, align 4
-  br label %if.end15
+; <label>:31                                      ; preds = %28
+  %32 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
+  store i32 %32, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RL_Wheel_Threshold_10kmh, align 4
+  br label %33
 
-if.end15:                                         ; preds = %if.else14, %if.then13
-  br label %if.end17
+; <label>:33                                      ; preds = %31, %30
+  br label %36
 
-if.else16:                                        ; preds = %if.end10
-  %11 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
-  store i32 %11, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RL_Wheel_Threshold_10kmh, align 4
-  br label %if.end17
+; <label>:34                                      ; preds = %25
+  %35 = load i32, i32* @brake_acc_nodiv_ctrl_B_local_RT1, align 4
+  store i32 %35, i32* @brake_acc_nodiv_ctrl_B_local_ABS_RL_Wheel_Threshold_10kmh, align 4
+  br label %36
 
-if.end17:                                         ; preds = %if.else16, %if.end15
-  %12 = load i32, i32* @RT2_Buffer0, align 4
-  store i32 %12, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
+; <label>:36                                      ; preds = %34, %33
+  %37 = load i32, i32* @RT2_Buffer0, align 4
+  store i32 %37, i32* @brake_acc_nodiv_ctrl_B_local_RT2, align 4
   store i32 10, i32* @RT10, align 4
   ret i8* undef
 }
 
 ; Function Attrs: nounwind uwtable
 define i32 @main() #0 {
-entry:
   %t0 = alloca i64, align 8
   %t1 = alloca i64, align 8
   store i32 0, i32* @test, align 4
-  %call = call i32 @pthread_create(i64* %t0, %union.pthread_attr_t* null, i8* (i8*)* @task_compute, i8* null) #4
-  %call1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @task_RR_Wheel, i8* null) #4
+  %1 = call i32 @pthread_create(i64* %t0, %union.pthread_attr_t* null, i8* (i8*)* @task_compute, i8* null) #4
+  %2 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @task_RR_Wheel, i8* null) #4
   ret i32 0
 }
 

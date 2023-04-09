@@ -22,36 +22,35 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: nounwind uwtable
 define i8* @req1(i8* %unused) #0 {
-entry:
   store i32 1, i32* @irq, align 4
   store i32 1, i32* @global_id, align 4
   store i32 1, i32* @global_dev, align 4
-  %0 = load i32, i32* @global_dev, align 4
-  %cmp = icmp ne i32 %0, 1
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @global_dev, align 4
+  %2 = icmp ne i32 %1, 1
+  br i1 %2, label %3, label %4
 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 277, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req1, i32 0, i32 0)) #3
   unreachable
 
-if.end:                                           ; preds = %entry
-  %1 = load i32, i32* @irq, align 4
-  %cmp1 = icmp sgt i32 %1, -1
-  br i1 %cmp1, label %if.then2, label %if.end6
+; <label>:4                                       ; preds = %0
+  %5 = load i32, i32* @irq, align 4
+  %6 = icmp sgt i32 %5, -1
+  br i1 %6, label %7, label %12
 
-if.then2:                                         ; preds = %if.end
-  %2 = load i32, i32* @global_id, align 4
-  %cmp3 = icmp ne i32 %2, 1
-  br i1 %cmp3, label %if.then4, label %if.end5
+; <label>:7                                       ; preds = %4
+  %8 = load i32, i32* @global_id, align 4
+  %9 = icmp ne i32 %8, 1
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %7
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 277, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req1, i32 0, i32 0)) #3
   unreachable
 
-if.end5:                                          ; preds = %if.then2
-  br label %if.end6
+; <label>:11                                      ; preds = %7
+  br label %12
 
-if.end6:                                          ; preds = %if.end5, %if.end
+; <label>:12                                      ; preds = %11, %4
   store i32 -1, i32* @global_id, align 4
   store i32 -1, i32* @global_dev, align 4
   ret i8* undef
@@ -62,36 +61,35 @@ declare void @__assert_fail(i8*, i8*, i32, i8*) #1
 
 ; Function Attrs: nounwind uwtable
 define i8* @req2(i8* %unused) #0 {
-entry:
   store i32 2, i32* @irq, align 4
   store i32 2, i32* @global_id, align 4
   store i32 2, i32* @global_dev, align 4
-  %0 = load i32, i32* @global_dev, align 4
-  %cmp = icmp ne i32 %0, 2
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @global_dev, align 4
+  %2 = icmp ne i32 %1, 2
+  br i1 %2, label %3, label %4
 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 287, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req2, i32 0, i32 0)) #3
   unreachable
 
-if.end:                                           ; preds = %entry
-  %1 = load i32, i32* @irq, align 4
-  %cmp1 = icmp sgt i32 %1, -1
-  br i1 %cmp1, label %if.then2, label %if.end6
+; <label>:4                                       ; preds = %0
+  %5 = load i32, i32* @irq, align 4
+  %6 = icmp sgt i32 %5, -1
+  br i1 %6, label %7, label %12
 
-if.then2:                                         ; preds = %if.end
-  %2 = load i32, i32* @global_id, align 4
-  %cmp3 = icmp ne i32 %2, 2
-  br i1 %cmp3, label %if.then4, label %if.end5
+; <label>:7                                       ; preds = %4
+  %8 = load i32, i32* @global_id, align 4
+  %9 = icmp ne i32 %8, 2
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %7
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 287, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req2, i32 0, i32 0)) #3
   unreachable
 
-if.end5:                                          ; preds = %if.then2
-  br label %if.end6
+; <label>:11                                      ; preds = %7
+  br label %12
 
-if.end6:                                          ; preds = %if.end5, %if.end
+; <label>:12                                      ; preds = %11, %4
   store i32 -1, i32* @global_id, align 4
   store i32 -1, i32* @global_dev, align 4
   ret i8* undef
@@ -99,36 +97,35 @@ if.end6:                                          ; preds = %if.end5, %if.end
 
 ; Function Attrs: nounwind uwtable
 define i8* @req3(i8* %unused) #0 {
-entry:
   store i32 3, i32* @irq, align 4
   store i32 3, i32* @global_id, align 4
   store i32 3, i32* @global_dev, align 4
-  %0 = load i32, i32* @global_dev, align 4
-  %cmp = icmp ne i32 %0, 3
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @global_dev, align 4
+  %2 = icmp ne i32 %1, 3
+  br i1 %2, label %3, label %4
 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 297, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req3, i32 0, i32 0)) #3
   unreachable
 
-if.end:                                           ; preds = %entry
-  %1 = load i32, i32* @irq, align 4
-  %cmp1 = icmp sgt i32 %1, -1
-  br i1 %cmp1, label %if.then2, label %if.end6
+; <label>:4                                       ; preds = %0
+  %5 = load i32, i32* @irq, align 4
+  %6 = icmp sgt i32 %5, -1
+  br i1 %6, label %7, label %12
 
-if.then2:                                         ; preds = %if.end
-  %2 = load i32, i32* @global_id, align 4
-  %cmp3 = icmp ne i32 %2, 3
-  br i1 %cmp3, label %if.then4, label %if.end5
+; <label>:7                                       ; preds = %4
+  %8 = load i32, i32* @global_id, align 4
+  %9 = icmp ne i32 %8, 3
+  br i1 %9, label %10, label %11
 
-if.then4:                                         ; preds = %if.then2
+; <label>:10                                      ; preds = %7
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 297, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__PRETTY_FUNCTION__.req3, i32 0, i32 0)) #3
   unreachable
 
-if.end5:                                          ; preds = %if.then2
-  br label %if.end6
+; <label>:11                                      ; preds = %7
+  br label %12
 
-if.end6:                                          ; preds = %if.end5, %if.end
+; <label>:12                                      ; preds = %11, %4
   store i32 -1, i32* @global_id, align 4
   store i32 -1, i32* @global_dev, align 4
   ret i8* undef
@@ -136,20 +133,18 @@ if.end6:                                          ; preds = %if.end5, %if.end
 
 ; Function Attrs: nounwind uwtable
 define i8* @req4(i8* %unused) #0 {
-entry:
   store i32 -1, i32* @irq, align 4
   ret i8* undef
 }
 
 ; Function Attrs: nounwind uwtable
 define i32 @main() #0 {
-entry:
   %t1 = alloca i64, align 8
   %t2 = alloca i64, align 8
-  %call = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @req1, i8* null) #4
-  %call1 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req2, i8* null) #4
-  %call2 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req3, i8* null) #4
-  %call3 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req4, i8* null) #4
+  %1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @req1, i8* null) #4
+  %2 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req2, i8* null) #4
+  %3 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req3, i8* null) #4
+  %4 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @req4, i8* null) #4
   ret i32 0
 }
 

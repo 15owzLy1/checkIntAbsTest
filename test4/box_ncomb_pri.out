@@ -110,7 +110,7 @@ Interference Iteration: 2
 Analyzing thread: 0
 ======================================
 ID of Load: 10
-  %0 = load i32, i32* @a, align 4
+  %1 = load i32, i32* @a, align 4
 ID of Store: 17
   store i32 1, i32* @a, align 4
 St is nonLast
@@ -118,7 +118,7 @@ Load is completeLoad
 ======================================
 ======================================
 ID of Load: 10
-  %0 = load i32, i32* @a, align 4
+  %1 = load i32, i32* @a, align 4
 ID of Store: 20
   store i32 0, i32* @a, align 4
 St is NOT nonLast
@@ -128,7 +128,7 @@ st is not higher than ld
 Analyzing thread: 1
 ======================================
 ID of Load: 18
-  %0 = load i32, i32* @a, align 4
+  %1 = load i32, i32* @a, align 4
 ID of Store: 9
   store i32 1, i32* @a, align 4
 St is nonLast
@@ -136,7 +136,7 @@ Load is completeLoad
 ======================================
 ======================================
 ID of Load: 18
-  %0 = load i32, i32* @a, align 4
+  %1 = load i32, i32* @a, align 4
 ID of Store: 13
   store i32 0, i32* @a, align 4
 St is NOT nonLast
@@ -149,15 +149,15 @@ v7: @b = global i32 0, align 4
 v8: @c = global i32 0, align 4
 v9: @x = global i32 0, align 4
 v10: i8* %unused
-v0:   %0 = load i32, i32* @a, align 4
-v1:   %cmp = icmp ne i32 %0, 1
+v0:   %1 = load i32, i32* @a, align 4
+v1:   %2 = icmp ne i32 %1, 1
+v11: i8* %0
 v12: i8* %1
 v13: i32 %2
-v11: i8* %0
 v14: i8* %3
 v15: i8* %unused
-v2:   %0 = load i32, i32* @a, align 4
-v3:   %cmp = icmp ne i32 %0, 1
+v2:   %1 = load i32, i32* @a, align 4
+v3:   %2 = icmp ne i32 %1, 1
 v16: i64* %0
 v4:   %t1 = alloca i64, align 8
 v5:   %t2 = alloca i64, align 8
@@ -166,11 +166,10 @@ v18: i8* (i8*)* %2
 v19: i8* %3
 ==== f1() Results ====
 BasicBlock: 
-entry:
   store i32 1, i32* @a, align 4
-  %0 = load i32, i32* @a, align 4
-  %cmp = icmp ne i32 %0, 1
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @a, align 4
+  %2 = icmp ne i32 %1, 1
+  br i1 %2, label %3, label %4
 Facts: interval of dim (20,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -194,13 +193,13 @@ Facts: interval of dim (20,0):
       v9 in [0,0]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 23, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @__PRETTY_FUNCTION__.f1, i32 0, i32 0)) #3
   unreachable
 Facts: interval of dim (20,0): bottom
 
 BasicBlock: 
-if.end:                                           ; preds = %entry
+; <label>:4                                       ; preds = %0
   store i32 0, i32* @a, align 4
   ret i8* null
 Facts: interval of dim (20,0):
@@ -228,11 +227,10 @@ Facts: interval of dim (20,0):
 ======================
 ==== f2() Results ====
 BasicBlock: 
-entry:
   store i32 1, i32* @a, align 4
-  %0 = load i32, i32* @a, align 4
-  %cmp = icmp ne i32 %0, 1
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = load i32, i32* @a, align 4
+  %2 = icmp ne i32 %1, 1
+  br i1 %2, label %3, label %4
 Facts: interval of dim (20,0):
       v0 in [-oo,+oo]
       v1 in [-oo,+oo]
@@ -256,7 +254,7 @@ Facts: interval of dim (20,0):
       v9 in [0,0]
 
 BasicBlock: 
-if.then:                                          ; preds = %entry
+; <label>:3                                       ; preds = %0
   call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 40, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @__PRETTY_FUNCTION__.f2, i32 0, i32 0)) #3
   unreachable
 Facts: interval of dim (20,0):
@@ -282,7 +280,7 @@ Facts: interval of dim (20,0):
       v9 in [0,0]
 
 BasicBlock: 
-if.end:                                           ; preds = %entry
+; <label>:4                                       ; preds = %0
   store i32 0, i32* @a, align 4
   ret i8* null
 Facts: interval of dim (20,0):
@@ -310,11 +308,10 @@ Facts: interval of dim (20,0):
 ======================
 ==== main() Results ====
 BasicBlock: 
-entry:
   %t1 = alloca i64, align 8
   %t2 = alloca i64, align 8
-  %call = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @f1, i8* null) #3
-  %call1 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @f2, i8* null) #3
+  %1 = call i32 @pthread_create(i64* %t1, %union.pthread_attr_t* null, i8* (i8*)* @f1, i8* null) #3
+  %2 = call i32 @pthread_create(i64* %t2, %union.pthread_attr_t* null, i8* (i8*)* @f2, i8* null) #3
   ret i32 0
 Facts: interval of dim (20,0):
       v0 in [-oo,+oo]
